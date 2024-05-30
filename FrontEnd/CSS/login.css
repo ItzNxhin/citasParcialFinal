@@ -1,0 +1,52 @@
+body{
+    background: url(../images/foto1.png) no-repeat center center fixed;
+    background-size: cover;
+}
+.gdiv{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    float: left;
+    background-color: #ff405c !important;
+    height: 75px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 50px;
+    color: #fefeff;
+}
+.cursiva{
+    display: flex;
+    font-family: "Dancing Script", cursive;
+    align-items: center;
+}
+.d1center{
+    width: 100%;
+    float: left;
+    font-size: 30px;
+    color: white;
+    padding-top: 50px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    float: left;
+}
+.campo{
+    color: #292929;
+    width: 20%;
+    height: 55px;
+    font-size: 18px;
+    padding: 15px;
+    background-color: #fefeff;
+    border: 0px;
+    border-radius: 30px;
+}
+.botones{
+    width: 10%;
+    align-items: center;
+    float: center;
+    color: #fefeff;
+    font-size: 18px;
+    padding: 10px 0px;
+    background-color: #f0b016;
+    border-radius: 30px;
+    font-family: 'Poppins', sans-serif;
+}

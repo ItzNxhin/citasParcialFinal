@@ -1,6 +1,7 @@
 package citas.BackEnd;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import citas.Model.Buscadores;
 import citas.Model.Persona;
@@ -9,8 +10,7 @@ import citas.Model.Database.PersonasDAO;
 
 public class Test {
     static void h(){
-        /* 
-         * Postulantes a = new Postulantes();
+         Postulantes a = new Postulantes();
             a.setName("Sujeto");
             a.setLastname("De prueba");
             a.setAge(19);
@@ -24,15 +24,19 @@ public class Test {
             a.setDisponibilidad("si");
             a.setInteres("juegos");
             a.setCedula("12345678");
-        */
         
-
+        
+        ArrayList<Postulantes> x = new ArrayList<>();
         PersonasDAO consulta = new PersonasDAO();
         try {
-            consulta.eliminarPostulante("123456789");
+             x = consulta.listaDePostulantes();
         } catch (SQLException e) {
             e.printStackTrace();
         }   
+        for(Postulantes i : x){
+            System.out.println(i.toString());
+            
+        }
     }
 
     public static void main(String[] args) {

@@ -7,6 +7,7 @@ import java.sql.PreparedStatement;
 import java.sql.Statement;
 
 import citas.Model.Buscadores;
+import citas.Model.Postulantes;
 
 public class PersonasDAO {
     private Connection con; // Objeto de conexión a la base de datos
@@ -44,6 +45,34 @@ public class PersonasDAO {
         ps.setString(14, obj.getG_Identidad());
         ps.setString(15, obj.getG_Edad());
         ps.setString(16, obj.getCedula());
+        // Ejecuta la sentencia SQL para insertar el usuario en la base de datos
+        ps.executeUpdate();
+        // Cierra la sentencia preparada y desconecta de la base de datos
+        ps.close();
+        DatabaseConnection.desconectar();
+    }
+
+    public void agregarPostulantes(Postulantes obj) throws SQLException {
+        String insert = "INSERT INTO postulantes VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        // Establece la conexión con la base de datos
+        con = (Connection) DatabaseConnection.getConexion();
+        // Prepara la sentencia SQL
+        ps = con.prepareStatement(insert);
+        // Establece los parámetros de la sentencia SQL
+        ps.setString(1, obj.getCedula());
+        ps.setString(2, obj.getName());
+        ps.setString(3, obj.getLastname());
+        ps.setInt(4, obj.getAge());
+        ps.setFloat(5, obj.getHeight());
+        ps.setString(6, obj.getJob());
+        ps.setString(7, obj.getPhysique());
+        ps.setString(8, obj.getC_status());
+        ps.setString(9, obj.getGender());
+        ps.setString(10, obj.getEmail());
+        ps.setString(11, obj.getPhone());
+        ps.setString(12, obj.getInteres());
+        ps.setString(13, obj.getDisponibilidad());
+        
         // Ejecuta la sentencia SQL para insertar el usuario en la base de datos
         ps.executeUpdate();
         // Cierra la sentencia preparada y desconecta de la base de datos

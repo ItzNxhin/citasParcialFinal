@@ -1,0 +1,72 @@
+body {
+    background-image: url(../images/foto2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: black;
+}
+
+.letras {
+    display: flex;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    height: 450px;
+    width: 200px;
+    flex: 1;
+    align-items: center;
+}
+
+.mismaLinea {
+    display: flex;
+    height: auto;
+}
+
+.d2center {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    height: 450px;
+    width: 200px;
+    flex: 1;
+}
+
+.gdiv {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-top: 0%;
+    background-color: #ff405c !important;
+    height: 75px;
+    font-size: 50px;
+    color: #fefeff;
+}
+
+.cursiva {
+    display: flex;
+    font-family: "Dancing Script";
+    align-items: center;
+    padding-left: 1%;
+}
+
+.botones {
+    display: flex;
+    color: #fefeff;
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #f0b016;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 5px 0;
+}
+.divBienvenido{
+    font-size: 50px;
+    height: 50px;
+    color: white;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}

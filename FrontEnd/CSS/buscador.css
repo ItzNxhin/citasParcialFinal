@@ -1,5 +1,5 @@
 body{
-    background: url(../images/foto1.png) no-repeat center center fixed;
+    background: url(../images/foto3.png) no-repeat center center fixed;
     background-size: cover;
 }
 .gdiv{
@@ -31,8 +31,8 @@ body{
 }
 .campo{
     color: #292929;
-    width: 20%;
-    height: 55px;
+    width: 50%;
+    height: 25px;
     font-size: 18px;
     padding: 15px;
     background-color: #fefeff;
@@ -54,11 +54,19 @@ body{
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    height: 700px;
 }
 
 .columna {
-    display: flex;
-    flex: 2;
-    padding: 10px;
-    background-color: aqua;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    height: 600px;
+    width: 200px;
+    flex: 1;
+}
+.fila {
+    width: 100%;
+    height: 60px;
 }

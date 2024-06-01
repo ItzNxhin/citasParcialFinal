@@ -9,24 +9,27 @@ import citas.Model.Database.PersonasDAO;
 
 public class Test {
     static void h(){
-        Postulantes a = new Postulantes();
-        a.setName("Sujeto");
-        a.setLastname("De prueba");
-        a.setAge(19);
-        a.setHeight(Float.parseFloat("1.75"));
-        a.setJob("Trabajo generico");
-        a.setPhysique("Flaco");
-        a.setC_status("Soltero");
-        a.setGender("Hombre");
-        a.setEmail("correo@gmail.com");
-        a.setPhone("3003003000");
-        a.setDisponibilidad("si");
-        a.setInteres("juegos");
-        a.setCedula("123456789");
+        /* 
+         * Postulantes a = new Postulantes();
+            a.setName("Sujeto");
+            a.setLastname("De prueba");
+            a.setAge(19);
+            a.setHeight(Float.parseFloat("1.75"));
+            a.setJob("Trabajo generico");
+            a.setPhysique("Flaco");
+            a.setC_status("Soltero");
+            a.setGender("Hombre");
+            a.setEmail("correo@gmail.com");
+            a.setPhone("3003003000");
+            a.setDisponibilidad("si");
+            a.setInteres("juegos");
+            a.setCedula("12345678");
+        */
+        
 
         PersonasDAO consulta = new PersonasDAO();
         try {
-            consulta.agregarPostulantes(a);
+            consulta.eliminarPostulante("123456789");
         } catch (SQLException e) {
             e.printStackTrace();
         }   

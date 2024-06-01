@@ -1,10 +1,10 @@
-package citas.citas;
+package citas.BackEnd;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CitasApplicationTests {
+class BackEndApplicationTests {
 
 	@Test
 	void contextLoads() {

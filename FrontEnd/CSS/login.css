@@ -6,7 +6,7 @@ body{
     display: flex;
     align-items: center;
     width: 100%;
-    float: left;
+    padding-top: 0%;
     background-color: #ff405c !important;
     height: 75px;
     font-family: 'Poppins', sans-serif;
@@ -17,17 +17,17 @@ body{
     display: flex;
     font-family: "Dancing Script", cursive;
     align-items: center;
+    padding-left: 1%;
 }
 .d1center{
-    width: 100%;
-    float: left;
+    width: 50%;
+    float: center;
     font-size: 30px;
     color: white;
     padding-top: 50px;
     text-align: center;
     font-family: 'Poppins', sans-serif;
     width: 100%;
-    float: left;
 }
 .campo{
     color: #292929;
@@ -40,7 +40,7 @@ body{
     border-radius: 30px;
 }
 .botones{
-    width: 10%;
+    width: 30%;
     align-items: center;
     float: center;
     color: #fefeff;
@@ -49,4 +49,16 @@ body{
     background-color: #f0b016;
     border-radius: 30px;
     font-family: 'Poppins', sans-serif;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.columna {
+    display: flex;
+    flex: 2;
+    padding: 10px;
+    background-color: aqua;
 }

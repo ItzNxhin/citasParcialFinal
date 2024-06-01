@@ -149,4 +149,42 @@ public class PersonasDAO {
         DatabaseConnection.desconectar();
         return post;
     }
+
+    public ArrayList<Buscadores> listaDeBuscadores() throws SQLException {
+        ArrayList<Buscadores> post = new ArrayList<Buscadores>();
+        String consulta = "SELECT * FROM buscadores";
+
+        // inicializa la conexion para poder ejecutar una peticion a la base de datos
+        con = DatabaseConnection.getConexion();
+        st = con.createStatement();
+        // Ejecuta la consulta
+        rs = st.executeQuery(consulta);
+        // Verifica que la base no ese vacia
+        while (rs.next()) {
+            // toma los parametros de cada papa para añadirlos en un arreglo de datos
+            Buscadores p = new Buscadores();
+            
+            p.setName(rs.getString("nombre"));
+            p.setLastname(rs.getString("apellido"));
+            p.setAge(rs.getInt("edad"));
+            p.setHeight(rs.getFloat("estatura"));
+            p.setJob(rs.getString("profesion"));
+            p.setPhysique(rs.getString("contextura"));
+            p.setC_status(rs.getString("estadocivil"));
+            p.setGender(rs.getString("identidadgenero"));
+            p.setEmail(rs.getString("correo"));
+            p.setPhone(rs.getString("telefono"));
+            p.setG_contextura(rs.getString("g_contextura"));
+            p.setG_Interes(rs.getString("g_interes"));
+            p.setG_estatura(rs.getString("g_identidad"));
+            p.setG_Identidad(rs.getString("g_identidad"));
+            p.setG_Edad(rs.getString("g_edad"));
+            p.setCedula(rs.getString("cedula"));
+            post.add(p);
+        }
+        // Cierra la conexion para proteger la base de datos
+        st.close();
+        DatabaseConnection.desconectar();
+        return post;
+    }
 }

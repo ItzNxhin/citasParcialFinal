@@ -1,0 +1,102 @@
+body {
+    background: url(../images/fondopostulantes.png) no-repeat center center fixed;
+    background-size: cover;
+
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.gdiv {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cursiva {
+    font-family: 'Dancing Script', cursive;
+    font-size: 28px;
+    color: #6c63ff;
+}
+
+.d1center {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 36px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.columna {
+    width: 45%;
+    margin-bottom: 20px;
+}
+
+.campo {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #f4f4f4;
+    transition: all 0.3s ease;
+}
+
+.campo:focus {
+    border-color: #6c63ff;
+    background-color: #fff;
+    outline: none;
+}
+
+.campo-largo {
+    font-size: 18px; /* Aumenta el tamaño de la fuente */
+    height: 50px; /* Aumenta la altura */
+}
+
+select.campo {
+    color: #666;
+}
+
+select.campo option {
+    color: #333;
+}
+
+.botones {
+    width: 48%;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #6c63ff;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.botones:hover {
+    background-color: #5145cd;
+}
+
+.fila {
+    display: flex;
+    justify-content: space-between;
+}

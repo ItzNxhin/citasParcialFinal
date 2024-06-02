@@ -27,17 +27,7 @@ public class Test {
          * a.setCedula("12345678");
          */
 
-        ArrayList<Buscadores> x = new ArrayList<>();
-        PersonasDAO consulta = new PersonasDAO();
-        try {
-            x = consulta.listaDeBuscadores();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        for (Buscadores i : x) {
-            System.out.println(i.toString());
-
-        }
+        
     }
 
     public static void main(String[] args) {

@@ -10,37 +10,35 @@ import citas.Model.Database.PersonasDAO;
 
 public class Test {
     static void h() {
-        /*
-         * Postulantes a = new Postulantes();
-         * a.setName("Sujeto");
-         * a.setLastname("De prueba");
-         * a.setAge(19);
-         * a.setHeight(Float.parseFloat("1.75"));
-         * a.setJob("Trabajo generico");
-         * a.setPhysique("Flaco");
-         * a.setC_status("Soltero");
-         * a.setGender("Hombre");
-         * a.setEmail("correo@gmail.com");
-         * a.setPhone("3003003000");
-         * a.setDisponibilidad("si");
-         * a.setInteres("juegos");
-         * a.setCedula("12345678");
-         */
 
-        ArrayList<Buscadores> x = new ArrayList<>();
-        PersonasDAO consulta = new PersonasDAO();
+        Postulantes a = new Postulantes();
+        a.setName("Sujeto");
+        a.setLastname("De prueba");
+        a.setAge(19);
+        a.setHeight(Float.parseFloat("1.75"));
+        a.setJob("Trabajo generico");
+        a.setPhysique("Flaco");
+        a.setC_status("Soltero");
+        a.setGender("Hombre");
+        a.setEmail("correo@gmail.com");
+        a.setPhone("3003003000");
+        a.setDisponibilidad("si");
+        a.setInteres("play");
+        a.setCedula("12345678");
+        a.setPago(true);
+
+        PersonasDAO n = new PersonasDAO();
+
         try {
-            x = consulta.listaDeBuscadores();
-        } catch (SQLException e) {
+            n.modificarPostulante(a);
+        } catch (Exception e) {
             e.printStackTrace();
         }
-        for (Buscadores i : x) {
-            System.out.println(i.toString());
+        
 
-        }
     }
 
     public static void main(String[] args) {
-        System.out.println(String.valueOf(25.9));
+        h();
     }
 }

@@ -16,4 +16,5 @@ public class Persona {
     protected String gender;
     protected String email;
     protected String phone;
+    protected boolean pago;
 }

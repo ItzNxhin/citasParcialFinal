@@ -6,11 +6,11 @@ import citas.Model.Buscadores;
 import citas.Model.Postulantes;
 import citas.Model.Database.PersonasDAO;
 
-public class GenCitas {
+public class GenMatches {
     
     private PersonasDAO bd;
 
-    public GenCitas(){
+    public GenMatches(){
         bd = new PersonasDAO();
     }
 

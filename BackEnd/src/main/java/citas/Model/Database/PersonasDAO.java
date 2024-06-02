@@ -5,6 +5,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.PreparedStatement;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 import citas.Model.Buscadores;
 import citas.Model.Postulantes;
@@ -22,6 +23,7 @@ public class PersonasDAO {
         st = null;
         rs = null;
     }
+
     public void agregarBuscadores(Buscadores obj) throws SQLException {
         String insert = "INSERT INTO buscadores VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         // Establece la conexión con la base de datos
@@ -72,11 +74,117 @@ public class PersonasDAO {
         ps.setString(11, obj.getPhone());
         ps.setString(12, obj.getInteres());
         ps.setString(13, obj.getDisponibilidad());
-        
+
         // Ejecuta la sentencia SQL para insertar el usuario en la base de datos
         ps.executeUpdate();
         // Cierra la sentencia preparada y desconecta de la base de datos
         ps.close();
         DatabaseConnection.desconectar();
+    }
+
+    public void eliminarPostulante(String cedula) throws SQLException {
+        String consulta = "DELETE FROM postulantes WHERE cedula = ?";
+
+        // inicializa la conexion para poder ejecutar una peticion a la base de datos
+        Connection con = DatabaseConnection.getConexion();
+        PreparedStatement ps = con.prepareStatement(consulta);
+        // Completa los parmetros de la consulta
+        ps.setString(1, cedula);
+        // Ejecuta la consulta
+        ps.executeUpdate();
+
+        // Cierra la conexion para proteger la base de datos
+        ps.close();
+        con.close();
+        DatabaseConnection.desconectar();
+    }
+
+    public void eliminarBuscador(String cedula) throws SQLException {
+        String consulta = "DELETE FROM buscadores WHERE cedula = ?";
+
+        // inicializa la conexion para poder ejecutar una peticion a la base de datos
+        Connection con = DatabaseConnection.getConexion();
+        PreparedStatement ps = con.prepareStatement(consulta);
+        // Completa los parmetros de la consulta
+        ps.setString(1, cedula);
+        // Ejecuta la consulta
+        ps.executeUpdate();
+
+        // Cierra la conexion para proteger la base de datos
+        ps.close();
+        con.close();
+        DatabaseConnection.desconectar();
+    }
+
+    public ArrayList<Postulantes> listaDePostulantes() throws SQLException {
+        ArrayList<Postulantes> post = new ArrayList<Postulantes>();
+        String consulta = "SELECT * FROM postulantes";
+
+        // inicializa la conexion para poder ejecutar una peticion a la base de datos
+        con = DatabaseConnection.getConexion();
+        st = con.createStatement();
+        // Ejecuta la consulta
+        rs = st.executeQuery(consulta);
+        // Verifica que la base no ese vacia
+        while (rs.next()) {
+            // toma los parametros de cada papa para añadirlos en un arreglo de datos
+            Postulantes p = new Postulantes();
+            p.setCedula(rs.getString("cedula"));
+            p.setName(rs.getString("nombre"));
+            p.setLastname(rs.getString("apellido"));
+            p.setAge(rs.getInt("edad"));
+            p.setHeight(rs.getFloat("estatura"));
+            p.setJob(rs.getString("profesion"));
+            p.setPhysique(rs.getString("contextura"));
+            p.setC_status(rs.getString("estadocivil"));
+            p.setGender(rs.getString("identidadgenero"));
+            p.setEmail(rs.getString("correo"));
+            p.setPhone(rs.getString("telefono"));
+            p.setInteres(rs.getString("interesprincipal"));
+            p.setDisponibilidad(rs.getString("disponibilidad"));
+            post.add(p);
+        }
+        // Cierra la conexion para proteger la base de datos
+        st.close();
+        DatabaseConnection.desconectar();
+        return post;
+    }
+
+    public ArrayList<Buscadores> listaDeBuscadores() throws SQLException {
+        ArrayList<Buscadores> post = new ArrayList<Buscadores>();
+        String consulta = "SELECT * FROM buscadores";
+
+        // inicializa la conexion para poder ejecutar una peticion a la base de datos
+        con = DatabaseConnection.getConexion();
+        st = con.createStatement();
+        // Ejecuta la consulta
+        rs = st.executeQuery(consulta);
+        // Verifica que la base no ese vacia
+        while (rs.next()) {
+            // toma los parametros de cada papa para añadirlos en un arreglo de datos
+            Buscadores p = new Buscadores();
+            
+            p.setName(rs.getString("nombre"));
+            p.setLastname(rs.getString("apellido"));
+            p.setAge(rs.getInt("edad"));
+            p.setHeight(rs.getFloat("estatura"));
+            p.setJob(rs.getString("profesion"));
+            p.setPhysique(rs.getString("contextura"));
+            p.setC_status(rs.getString("estadocivil"));
+            p.setGender(rs.getString("identidadgenero"));
+            p.setEmail(rs.getString("correo"));
+            p.setPhone(rs.getString("telefono"));
+            p.setG_contextura(rs.getString("g_contextura"));
+            p.setG_Interes(rs.getString("g_interes"));
+            p.setG_estatura(rs.getString("g_identidad"));
+            p.setG_Identidad(rs.getString("g_identidad"));
+            p.setG_Edad(rs.getString("g_edad"));
+            p.setCedula(rs.getString("cedula"));
+            post.add(p);
+        }
+        // Cierra la conexion para proteger la base de datos
+        st.close();
+        DatabaseConnection.desconectar();
+        return post;
     }
 }

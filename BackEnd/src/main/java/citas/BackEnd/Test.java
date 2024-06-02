@@ -41,6 +41,6 @@ public class Test {
     }
 
     public static void main(String[] args) {
-        h();
+        System.out.println(String.valueOf(25.9));
     }
 }

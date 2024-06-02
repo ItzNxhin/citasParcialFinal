@@ -1,4 +1,4 @@
-package citas.BackEnd;
+package citas.ms_Insertar;
 
 import java.sql.SQLException;
 import java.util.ArrayList;

@@ -8,6 +8,7 @@ import citas.Model.Persona;
 import citas.Model.Postulantes;
 import citas.Model.Database.PersonasDAO;
 
+@SuppressWarnings("unused")
 public class Test {
     static void h() {
 

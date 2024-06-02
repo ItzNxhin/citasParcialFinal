@@ -29,15 +29,19 @@ body{
     font-family: 'Poppins', sans-serif;
     width: 100%;
 }
-.campo{
+.campo {
     color: #292929;
     width: 50%;
-    height: 25px;
+    height: 40px;
     font-size: 18px;
     padding: 15px;
-    background-color: #fefeff;
+    background-color: #FFE5CC;
     border: 0px;
     border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 .botones{
     width: 30%;
@@ -46,21 +50,22 @@ body{
     color: #fefeff;
     font-size: 18px;
     padding: 10px 0px;
-    background-color: #f0b016;
+    background-color:#ff405c;
     border-radius: 30px;
     font-family: 'Poppins', sans-serif;
 }
-.container {
+.container1 {
     display: flex;
     justify-content: center;
     margin-top: 20px;
     height: 700px;
+    align-items: center;
 }
 
 .columna {
     display: flex; 
     flex-direction: column; 
-    justify-content: center; 
+    justify-content: flex-start;
     align-items: center; 
     height: 600px;
     width: 200px;

@@ -23,6 +23,7 @@
       <link rel="icon" href="images/fevicon.png" type="image/gif" />
       <!-- Scrollbar Custom CSS -->
       <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <link rel="stylesheet" href="css/buscador.css">
       <!-- Tweaks for older IEs-->
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
       <!-- owl stylesheets -->
@@ -77,53 +78,59 @@
          <div class="container">
             <div class="row">
                <div class="col-md-6">
-                  <h1 class="about_taital">Registrate como buscador <span style="color: #ff3f5c;"></span></h1>
-                  <div class= "gdiv">
-                 </div>
-                 <div class="d1center">
-                     <br>
-                     <form>
-                         <div class="container">
-                             <div class="columna">
-                                 <input type="text" class="campo" placeholder="Nombre:"name="Name">
-                                 <br>
-                                 <input type="text" class="campo" placeholder="Apellido:" name="Name">
-                                 <br>
-                                 <input type="text" class="campo" placeholder="Edad:" name="Name">
-                                 <br>
-                                 <input type="text" class="campo" placeholder="Profesion u oficio:" name="Name">
-                                 <br>
-                                 <input type="text" class="campo" placeholder="Estado civil:" name="Name">
-                                 <br>
-                                 <input type="text" class="campo" placeholder="Identidad de genero:" name="Name">
-                                 <br>
-                                 <input type="text" class="campo" placeholder="Correo Electronico:" name="Name">
-                             </div>
-                             <div class="columna"> 
-                                 <input type="text" class="campo" placeholder="Telefono:" name="Name">
-                                 <br>
-                                 <input type="text" class="campo" placeholder="Contextura que te gusta:" name="Name"> 
-                                 <br>   
-                                 <input type="text" class="campo" placeholder="Interes que te gusta:" name="Name">
-                                 <br>
-                                 <input type="text" class="campo" placeholder="Estatura ideal:" name="Name">
-                                 <br>
-                                 <input type="text" class="campo" placeholder="identidad de genero que te gusta:" name="Name">
-                                 <br>
-                                 <input type="text" class="campo" placeholder="Edad ideal:" name="Name">
-                                 <br>
-                                 <div class="fila">
-                                     <input type="submit" class="botones" name="registrarBuscador">
-                                     <input type="reset" class="botones" name="registrarBuscador">
-                                 </div>                  
-                             </div>
-                         </div>
-                     </form>
-                 </div>
-               </div>
+               <h1 class="about_taital">Registrate como buscador <span style="color: #ff3f5c;"></span></h1>
                </div>
             </div>
          </div>
+         <div class="d1center">
+            <form>
+                <div class="container1">
+                    <div class="columna">
+                        <input type="text" class="campo" placeholder="Nombre:"name="Name">
+                        <br>
+                        <input type="text" class="campo" placeholder="Apellido:" name="Name">
+                        <br>
+                        <input type="text" class="campo" placeholder="Cedula:" name="Name">
+                        <br>
+                        <input type="number" class="campo" placeholder="Edad:" name="Name">
+                        <br>
+                        <input type="number" class="campo" placeholder="Estatura:" name="Name">
+                        <br>
+                        <input type="text" class="campo" placeholder="Profesion u oficio:" name="Name">
+                        <br>
+                        <select class="campo" name="estado_civil">
+                           <option value="" disabled selected>Estado civil</option>
+                           <option value="soltero">Soltero</option>
+                           <option value="separado">Separado</option>
+                           <option value="viudo">Viudo</option>
+                           <option value="es_complicado">Es complicado</option>
+                        </select>
+                        <br>
+                        <input type="text" class="campo" placeholder="Identidad de genero:" name="Name">
+                     </div>
+                     <div class="columna">
+                        <input type="text" class="campo" placeholder="Correo Electronico:" name="Name">
+                        <br>
+                        <input type="text" class="campo" placeholder="Telefono:" name="Name">
+                        <br>
+                        <input type="text" class="campo" placeholder="Contextura que te gusta:" name="Name"> 
+                        <br>   
+                        <input type="text" class="campo" placeholder="Interes que te gusta:" name="Name">
+                        <br>
+                        <input type="text" class="campo" placeholder="Estatura ideal:" name="Name">
+                        <br>
+                        <input type="text" class="campo" placeholder="identidad de genero que te gusta:" name="Name">
+                        <br>
+                        <input type="text" class="campo" placeholder="Edad ideal:" name="Name">
+                        <br>
+                        <div class="fila">
+                            <input type="submit" class="botones" name="registrarBuscador">
+                            <input type="reset" class="botones" name="registrarBuscador">
+                        </div>                  
+                    </div>
+                </div>
+            </form>
+        </div>
       </div>
       <!-- wine section end -->
       <!-- footer section start -->

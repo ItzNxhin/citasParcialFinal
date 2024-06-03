@@ -29,7 +29,7 @@
       <!-- owl stylesheets -->
       <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Poppins:400,700&display=swap&subset=latin-ext" rel="stylesheet">
       <link rel="stylesheet" href="css/owl.carousel.min.css">
-      <link rel="stylesoeet" href="css/owl.theme.default.min.css">
+      <link rel="stylesheet" href="css/owl.theme.default.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
    </head>
    <body>
@@ -78,25 +78,30 @@
          <div class="container">
             <div class="row">
                <div class="col-md-6">
-               <h1 class="about_taital">Registrate como postulante <span style="color: #ff3f5c;"></span></h1>
+               <h1 class="about_taital">Consulta tus datos como postulante <span style="color: #ff3f5c;"></span></h1>
                </div>
             </div>
          </div>
          <div class="d1center">
-            <form>
+            <form id="consultaPostulanteForm">
                 <div class="container1">
                     <div class="columna">
-                        <input type="text" class="campo" placeholder="Nombre:"name="nombrePostulante">
+                        <select id="cedulaComboBox" class="campo">
+                           <option value="" disabled selected>Selecciona la cédula</option>
+                           <!-- Agrega más opciones según sea necesario -->
+                        </select>
                         <br>
-                        <input type="text" class="campo" placeholder="Apellido:" name="apellidoPostulante">
+                        <input type="text" class="campo" placeholder="Nombre:" name="nombrePostulante" id="nombrePostulante">
                         <br>
-                        <input type="text" class="campo" placeholder="Cedula:" name="cedulaPostulante">
+                        <input type="text" class="campo" placeholder="Apellido:" name="apellidoPostulante" id="apellidoPostulante">
                         <br>
-                        <input type="number" class="campo" placeholder="Edad:" name="edadPostulante">
+                        <input type="text" class="campo" placeholder="Cedula:" name="cedulaPostulante" id="cedulaPostulante">
                         <br>
-                        <input type="number" class="campo" placeholder="Estatura:" name="estaturaPostulante">
+                        <input type="number" class="campo" placeholder="Edad:" name="edadPostulante" id="edadPostulante">
                         <br>
-                        <select class="campo" name="estadoCivilPostulante">
+                        <input type="number" class="campo" placeholder="Estatura:" name="estaturaPostulante" id="estaturaPostulante">
+                        <br>
+                        <select class="campo" name="estadoCivilPostulante" id="estadoCivilPostulante">
                            <option value="" disabled selected>Estado civil</option>
                            <option value="soltero">Soltero</option>
                            <option value="separado">Separado</option>
@@ -104,23 +109,24 @@
                            <option value="es_complicado">Es complicado</option>
                         </select>
                         <br>
-                        <input type="text" class="campo" placeholder="Profesion u oficio:" name="profesionPostulante">
+                        <input type="text" class="campo" placeholder="Profesion u oficio:" name="profesionPostulante" id="profesionPostulante">
                         <br>
-                        <input type="text" class="campo" placeholder="Identidad de genero:" name="generoPostulante">
                      </div>
                      <div class="columna">
-                        <input type="text" class="campo" placeholder="Correo Electronico:" name="correoPostulante">
+                        <input type="text" class="campo" placeholder="Identidad de genero:" name="generoPostulante" id="generoPostulante">
                         <br>
-                        <input type="text" class="campo" placeholder="Telefono:" name="telefonoPostulante">
+                        <input type="text" class="campo" placeholder="Correo Electronico:" name="correoPostulante" id="correoPostulante">
                         <br>
-                        <input type="text" class="campo" placeholder="Contextura que te gusta:" name="contexturaPostulante"> 
+                        <input type="text" class="campo" placeholder="Telefono:" name="telefonoPostulante" id="telefonoPostulante">
+                        <br>
+                        <input type="text" class="campo" placeholder="Contextura que te gusta:" name="contexturaPostulante" id="contexturaPostulante"> 
                         <br>   
-                        <input type="text" class="campo" placeholder="Interes principal:" name="interesPrincipalPostulante">
+                        <input type="text" class="campo" placeholder="Interes principal:" name="interesPrincipalPostulante" id="interesPrincipalPostulante">
                         <br>
-                        <input type="text" class="campo" placeholder="Disponibilidad:" name="disponibilidadPostulante">
+                        <input type="text" class="campo" placeholder="Disponibilidad:" name="disponibilidadPostulante" id="disponibilidadPostulante">
                         <br>
                         <div class="fila">
-                            <input type="submit" class="botones" name="registrarBuscador">
+                            <input type="button" class="botones" value="Consultar" onclick="consultarPostulante()">
                             <input type="reset" class="botones" name="limpiar">
                         </div>                  
                     </div>
@@ -129,27 +135,7 @@
         </div>
       </div>
       <!-- wine section end -->
-      <!-- footer section start -->
-      <div class="footer_section layout_padding">
-         <div class="container">
-            <div class="social_icon">
-               <ul>
-                  <li><a href="#"><img src="images/fb-icon.png"></a></li>
-                  <li><a href="#"><img src="images/twitter-icon.png"></a></li>
-                  <li><a href="#"><img src="images/instagram-icon.png"></a></li>
-                  <li><a href="#"><img src="images/linkedin-icon.png"></a></li>
-               </ul>
-            </div>
-         </div>
-         <!-- copyright section start -->
-         <div class="copyright_section">
-            <div class="container">
-               <p class="copyright_text">Copyright 2019 All Right Reserved By <a href="https://html.design">Free  html Templates</a></p>
-            </div>
-         </div>
-         <!-- copyright section end -->
-      </div>
-      <!-- footer section end -->
+ 
       <!-- Javascript files-->
       <script src="js/jquery.min.js"></script>
       <script src="js/popper.min.js"></script>
@@ -159,64 +145,5 @@
       <!-- sidebar -->
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>
-      <!-- javascript --> 
-      <script src="js/owl.carousel.js"></script>
-      <script>
-         if ( $(window).width() > 990) { 
-         
-          $('.owl-carousel').owlCarousel({
-             stagePadding: 350,
-             loop:true,
-             margin:35,
-             nav:true,
-             responsive:{
-                 0:{
-                     items:1
-                 },
-                 600:{
-                     items:1
-                 },
-                 1000:{
-                     items:1
-                 }
-             }
-         })
-         
-          }
-         
-         
-         
-          else { 
-         
-          $('.owl-carousel').owlCarousel({
-             stagePadding: 70,
-             loop:true,
-             margin:10,
-             nav:true,
-             responsive:{
-                 0:{
-                     items:1
-                 },
-                 600:{
-                     items:1
-                 },
-                 1000:{
-                     items:1
-                 }
-             }
-         })
-         
-           }    
-         
-      </script>
-      <script type="text/javascript">
-         $(window).scroll(function(){
-         var sticky = $('#navbar'),
-         scroll = $(window).scrollTop();
-         
-         if (scroll >= 600) sticky.addClass('fix-nav');
-         else sticky.removeClass('fix-nav');
-         });
-      </script>
    </body>
 </html>

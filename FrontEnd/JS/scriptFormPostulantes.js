@@ -24,8 +24,7 @@
     }
 });*/
 
-document.addEventListener("DOMContentLoaded", () => {
-    let boton = document.getElementById("registrarBuscador");
+let boton = document.getElementById("registrarBuscador");
 
     boton.addEventListener("click", evento => {
         evento.preventDefault();
@@ -68,4 +67,3 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log('Error:', error);
         }
     }
-});

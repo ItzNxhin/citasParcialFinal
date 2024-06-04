@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+import citas.Model.Buscadores;
 import citas.Model.Postulantes;
 import citas.Model.Database.PersonasDAO;
 
@@ -33,11 +35,22 @@ public class BackEndApplication {
         };
     }
 
-    @PostMapping("/FrontEnd/insertar")
-    public void insertar(@RequestBody Postulantes persona) {
+    @PostMapping("/FrontEnd/insertarPostulante")
+    public void insertarPostulante(@RequestBody Postulantes persona) {
         PersonasDAO p = new PersonasDAO();
         try{
             p.agregarPostulantes(persona);
+        }
+        catch(Exception e){
+            
+        }
+    }
+
+    @PostMapping("/FrontEnd/insertarBuscador")
+    public void insertarBuscador(@RequestBody Buscadores persona) {
+        PersonasDAO p = new PersonasDAO();
+        try{
+            p.agregarBuscadores(persona);
         }
         catch(Exception e){
             

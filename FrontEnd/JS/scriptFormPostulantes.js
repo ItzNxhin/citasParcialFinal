@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let boton = document.getElementById("registrarBuscador");
 
     boton.addEventListener("click", evento => {
-        evento.preventDefault();  // Previene el comportamiento por defecto del formulario
+        evento.preventDefault();
         registrarPersona();
     });
 
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
         campos.interes = document.getElementById("interesPrincipalPostulante").value;
         campos.disponibilidad = document.getElementById("disponibilidadPostulante").value;
         try {
-            const peticion = await fetch("http://localhost:8002/FrontEnd/insertar", {
+            const peticion = await fetch("http://localhost:8002/FrontEnd/insertarPostulante", {
                 method: 'POST',
                 headers: {
                     'Accept': 'application/json',

@@ -46,13 +46,13 @@
                      <a class="nav-link" href="index.html">Home</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="wish.html">Buscador</a>
+                     <a class="nav-link" href="registroBuscador.html">Buscador</a>
                   </li>
                   <li class="nav-item">
                      <a class="nav-link" href="registroPostulante.html">Postulante</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="testimonial.html">Testimonial</a>
+                     <a class="nav-link" href="consultas.html">Consultar</a>
                   </li>
                   <li class="nav-item">
                      <a class="nav-link" href="contact.html">Contact Us</a>
@@ -83,20 +83,22 @@
             </div>
          </div>
          <div class="d1center">
-            <form>
+            <form method="POST">
                 <div class="container1">
                     <div class="columna">
-                        <input type="text" class="campo" placeholder="Nombre:"name="nombreBuscador">
+                        <input type="text" class="campo" placeholder="Nombre:" id="nombreBuscador">
                         <br>
-                        <input type="text" class="campo" placeholder="Apellido:" name="apellidoBuscador">
+                        <input type="text" class="campo" placeholder="Apellido:" id="apellidoBuscador">
                         <br>
-                        <input type="text" class="campo" placeholder="Cedula:" name="cedulaBuscador">
+                        <input type="text" class="campo" placeholder="Cedula:" id="cedulaBuscador">
                         <br>
-                        <input type="number" class="campo" placeholder="Edad:" name="edadBuscador">
+                        <input type="number" class="campo" placeholder="Edad:" id="edadBuscador">
                         <br>
-                        <input type="number" class="campo" placeholder="Estatura:" name="estaturaBuscador">
+                        <input type="number" class="campo" placeholder="Estatura:" id="estaturaBuscador">
                         <br>
-                        <select class="campo" name="estado_civil">
+                        <input type="text" class="campo" placeholder="Contextura:" id="contexturaBuscador"> 
+                        <br>  
+                        <select class="campo" id="estadoCivilBuscador">
                            <option value="" disabled selected>Estado civil</option>
                            <option value="soltero">Soltero</option>
                            <option value="separado">Separado</option>
@@ -104,28 +106,34 @@
                            <option value="es_complicado">Es complicado</option>
                         </select>
                         <br>
-                        <input type="text" class="campo" placeholder="Profesion u oficio:" name="profesionBuscador">
+                        <input type="text" class="campo" placeholder="Profesion u oficio:" id="profesionBuscador">
                         <br>
-                        <input type="text" class="campo" placeholder="Identidad de genero:" name="generoBuscador">
+                        <input type="text" class="campo" placeholder="Identidad de genero:" id="generoBuscador">
                      </div>
                      <div class="columna">
-                        <input type="text" class="campo" placeholder="Correo Electronico:" name="correoBuscador">
+                        <input type="text" class="campo" placeholder="Correo Electronico:" id="correoBuscador">
                         <br>
-                        <input type="text" class="campo" placeholder="Telefono:" name="telefonoBuscador">
+                        <input type="text" class="campo" placeholder="Telefono:" id="telefonoBuscador">
                         <br>
-                        <input type="text" class="campo" placeholder="Contextura que te gusta:" name="contexturaBuscador"> 
+                        <input type="text" class="campo" placeholder="Contextura que te gusta:" id="contexturaIdealBuscador"> 
                         <br>   
-                        <input type="text" class="campo" placeholder="Interes que te gusta:" name="interesBuscador">
+                        <input type="text" class="campo" placeholder="Interes que te gusta:" id="interesIdealBuscador">
                         <br>
-                        <input type="number" class="campo" placeholder="Estatura ideal:" name="estaturaIdealBuscador">
+                        <input type="number" class="campo" placeholder="Estatura ideal:" id="estaturaIdealBuscador">
                         <br>
-                        <input type="text" class="campo" placeholder="Identidad de genero que te gusta:" name="generoGustoBuscador">
+                        <input type="text" class="campo" placeholder="Identidad de genero que te gusta:" id="generoGustoBuscador">
                         <br>
-                        <input type="number" class="campo" placeholder="Edad ideal:" name="edadBuscador">
+                        <input type="number" class="campo" placeholder="Edad ideal:" id="edadIdealBuscador">
+                        <br>
+                        <select class="campo" id="pagoBuscador">
+                           <option value="" disabled selected>Pagó?</option>
+                           <option value="si">Si</option>
+                           <option value="no">No</option>
+                        </select>
                         <br>
                         <div class="fila">
-                            <input type="submit" class="botones" name="registrarBuscador">
-                            <input type="reset" class="botones" name="limpiar">
+                            <input type="submit" class="botones" id="registrarBuscador">
+                            <input type="reset" class="botones" id="limpiar">
                         </div>                  
                     </div>
                 </div>
@@ -222,5 +230,6 @@
          else sticky.removeClass('fix-nav');
          });
       </script>
+      <script src="js/scriptFormBuscadores.js"></script>
    </body>
 </html>

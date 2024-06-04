@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>Registro Postulante</title>
+      <title>Registro Buscador</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -46,13 +46,13 @@
                      <a class="nav-link" href="index.html">Home</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="wish.html">Buscador</a>
+                     <a class="nav-link" href="registroBuscador.html">Buscador</a>
                   </li>
                   <li class="nav-item">
                      <a class="nav-link" href="registroPostulante.html">Postulante</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="testimonial.html">Testimonial</a>
+                     <a class="nav-link" href="consultas.html">Consultar</a>
                   </li>
                   <li class="nav-item">
                      <a class="nav-link" href="contact.html">Contact Us</a>
@@ -83,20 +83,20 @@
             </div>
          </div>
          <div class="d1center">
-            <form>
+            <form method="POST">
                 <div class="container1">
                     <div class="columna">
-                        <input type="text" class="campo" placeholder="Nombre:"name="nombrePostulante">
+                        <input type="text" class="campo" placeholder="Nombre:"id="nombrePostulante">
                         <br>
-                        <input type="text" class="campo" placeholder="Apellido:" name="apellidoPostulante">
+                        <input type="text" class="campo" placeholder="Apellido:" id="apellidoPostulante">
                         <br>
-                        <input type="text" class="campo" placeholder="Cedula:" name="cedulaPostulante">
+                        <input type="text" class="campo" placeholder="Cedula:" id="cedulaPostulante">
                         <br>
-                        <input type="number" class="campo" placeholder="Edad:" name="edadPostulante">
+                        <input type="number" class="campo" placeholder="Edad:" id="edadPostulante">
                         <br>
-                        <input type="number" class="campo" placeholder="Estatura:" name="estaturaPostulante">
+                        <input type="number" class="campo" placeholder="Estatura:" id="estaturaPostulante">
                         <br>
-                        <select class="campo" name="estadoCivilPostulante">
+                        <select class="campo" id="estadoCivilPostulante">
                            <option value="" disabled selected>Estado civil</option>
                            <option value="soltero">Soltero</option>
                            <option value="separado">Separado</option>
@@ -104,24 +104,24 @@
                            <option value="es_complicado">Es complicado</option>
                         </select>
                         <br>
-                        <input type="text" class="campo" placeholder="Profesion u oficio:" name="profesionPostulante">
+                        <input type="text" class="campo" placeholder="Profesion u oficio:" id="profesionPostulante">
                         <br>
-                        <input type="text" class="campo" placeholder="Identidad de genero:" name="generoPostulante">
+                        <input type="text" class="campo" placeholder="Identidad de genero:" id="generoPostulante">
                      </div>
                      <div class="columna">
-                        <input type="text" class="campo" placeholder="Correo Electronico:" name="correoPostulante">
+                        <input type="text" class="campo" placeholder="Correo Electronico:" id="correoPostulante">
                         <br>
-                        <input type="text" class="campo" placeholder="Telefono:" name="telefonoPostulante">
+                        <input type="text" class="campo" placeholder="Telefono:" id="telefonoPostulante">
                         <br>
-                        <input type="text" class="campo" placeholder="Contextura que te gusta:" name="contexturaPostulante"> 
+                        <input type="text" class="campo" placeholder="Contextura:" id="contexturaPostulante"> 
                         <br>   
-                        <input type="text" class="campo" placeholder="Interes principal:" name="interesPrincipalPostulante">
+                        <input type="text" class="campo" placeholder="Interes principal:" id="interesPrincipalPostulante">
                         <br>
-                        <input type="text" class="campo" placeholder="Disponibilidad:" name="disponibilidadPostulante">
+                        <input type="text" class="campo" placeholder="disponibilidad" id="disponibilidadPostulante">
                         <br>
                         <div class="fila">
-                            <input type="submit" class="botones" name="registrarBuscador">
-                            <input type="reset" class="botones" name="limpiar">
+                            <button id="registrarBuscador" class="botones">Enviar</button>
+                            <input type="reset" class="botones" id="limpiar">
                         </div>                  
                     </div>
                 </div>
@@ -218,5 +218,6 @@
          else sticky.removeClass('fix-nav');
          });
       </script>
+      <script src="js/scriptForm.js"></script>
    </body>
 </html>

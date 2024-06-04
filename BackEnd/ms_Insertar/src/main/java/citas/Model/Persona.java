@@ -2,8 +2,9 @@ package citas.Model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
-@Data @NoArgsConstructor
+@Data @NoArgsConstructor@ToString
 public class Persona {
     protected String cedula;
     protected String name;
@@ -16,5 +17,5 @@ public class Persona {
     protected String gender;
     protected String email;
     protected String phone;
-    protected boolean pago;
+    //protected boolean pago;
 }

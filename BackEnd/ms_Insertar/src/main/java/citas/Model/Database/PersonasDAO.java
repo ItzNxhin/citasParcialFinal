@@ -40,7 +40,7 @@ public class PersonasDAO {
         ps.setString(14, obj.getG_Identidad());
         ps.setString(15, obj.getG_Edad());
         ps.setString(16, obj.getCedula());
-        ps.setBoolean(17, obj.isPago());
+        //ps.setBoolean(17, obj.isPago());
         // Ejecuta la sentencia SQL para insertar el usuario en la base de datos
         ps.executeUpdate();
         // Cierra la sentencia preparada y desconecta de la base de datos
@@ -68,7 +68,7 @@ public class PersonasDAO {
         ps.setString(11, obj.getPhone());
         ps.setString(12, obj.getInteres());
         ps.setString(13, obj.getDisponibilidad());
-        ps.setBoolean(14, obj.isPago());
+        //ps.setBoolean(14, obj.isPago());
 
         // Ejecuta la sentencia SQL para insertar el usuario en la base de datos
         ps.executeUpdate();

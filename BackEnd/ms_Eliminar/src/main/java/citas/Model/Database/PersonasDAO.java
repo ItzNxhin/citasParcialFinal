@@ -7,9 +7,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.sql.ResultSet;
 
-import citas.Model.Buscadores;
-import citas.Model.Postulantes;
 
+@SuppressWarnings("unused")
 public class PersonasDAO {
     private Connection con; // Objeto de conexión a la base de datos
     private Statement st;

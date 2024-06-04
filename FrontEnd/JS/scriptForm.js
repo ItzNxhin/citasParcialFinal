@@ -43,11 +43,17 @@ document.addEventListener("DOMContentLoaded", () => {
         campos.job = document.getElementById("profesionPostulante").value;
         campos.physique = document.getElementById("contexturaPostulante").value;
         campos.c_status = document.getElementById("estadoCivilPostulante").value;
-        campos.gender = document.getElementById("generoPostulante").value
-        campos.email = document.getElementById("correoPostulante").value
-        campos.phone = document.getElementById("telefonoPostulante").value
-        campos.interes = document.getElementById("interesPrincipalPostulante").value
-        campos.disponibilidad = document.getElementById("disponibilidadPostulante").value
+        campos.gender = document.getElementById("generoPostulante").value;
+        campos.email = document.getElementById("correoPostulante").value;
+        campos.phone = document.getElementById("telefonoPostulante").value;
+        if(document.getElementById("pagoPostulante").value == "si"){
+            campos.pago = true;
+        }
+        else{
+            campos.pago = false;
+        }
+        campos.interes = document.getElementById("interesPrincipalPostulante").value;
+        campos.disponibilidad = document.getElementById("disponibilidadPostulante").value;
         try {
             const peticion = await fetch("http://localhost:8002/FrontEnd/insertar", {
                 method: 'POST',

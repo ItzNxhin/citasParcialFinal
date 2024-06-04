@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import citas.Model.Postulantes;
+import citas.Model.Database.PersonasDAO;
 
 @SpringBootApplication
 @RestController
@@ -34,6 +35,12 @@ public class BackEndApplication {
 
     @PostMapping("/FrontEnd/insertar")
     public void insertar(@RequestBody Postulantes persona) {
-        System.out.println("Datos recibidos: " + persona.toString());  // Imprime los datos en la consola del servidor
+        PersonasDAO p = new PersonasDAO();
+        try{
+            p.agregarPostulantes(persona);
+        }
+        catch(Exception e){
+            
+        }
     }
 }

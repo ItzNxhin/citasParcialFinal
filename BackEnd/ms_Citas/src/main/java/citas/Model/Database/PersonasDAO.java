@@ -146,7 +146,7 @@ public class PersonasDAO {
         ps.setNull(4, Types.VARCHAR);
         ps.setNull(5, Types.VARCHAR);
         ps.setNull(6, Types.VARCHAR);
-        ps.setTimestamp(6, new Timestamp(obj.getFecha().getTime()));
+        ps.setTimestamp(7, new Timestamp(obj.getFecha().getTime()));
 
         // Ejecuta la sentencia SQL para insertar el usuario en la base de datos
         ps.executeUpdate();
@@ -156,15 +156,15 @@ public class PersonasDAO {
     }
 
     public void calificarCita(Citas obj) throws SQLException {
-        String consulta = "UPDATE citas SET cal_buscador=?,cal_ Postulante, cal_Cita WHERE idcitas=?";
+        String consulta = "UPDATE citas SET cal_buscador=?,cal_Postulante=?, cal_Cita=? WHERE idcitas=?";
 
         // inicializa la conexion para poder ejecutar una peticion a la base de datos
         con = DatabaseConnection.getConexion();
         PreparedStatement ps = con.prepareStatement(consulta);
         // Toma los datos para encontrar la papa a modificar y para modificar cada campo
         // de la papa
-        ps.setString(1, obj.getC_buscador());
-        ps.setString(2, obj.getC_postulante());
+        ps.setString(1, obj.getCal_Buscador());
+        ps.setString(2, obj.getCal_Postulante());
         ps.setString(3, obj.getCal_Cita());
         ps.setInt(4, obj.getId());
         // Ejecuta la consulta
@@ -189,7 +189,7 @@ public class PersonasDAO {
 
             // Procesa el resultado
             if (rs.next()) {    
-                java.sql.Timestamp fecha1 = rs.getTimestamp("fecha");
+                java.sql.Timestamp fecha1 = rs.getTimestamp("hora");
                 fecha = new Date(fecha1.getTime());
 
                 

@@ -10,7 +10,7 @@ public class Test {
         Postulantes s =  new Postulantes();
         PersonasDAO a = new PersonasDAO();
         try {
-            s=a.consultarPostulante("1234568");
+            s=a.consultarPostulante("12345678");
         } catch (Exception e) {
             e.printStackTrace();
         }

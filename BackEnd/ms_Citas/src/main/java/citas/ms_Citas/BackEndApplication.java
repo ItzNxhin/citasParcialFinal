@@ -1,6 +1,21 @@
-@SpringBootApplication
-public class BackEndApplication {
+package citas.ms_Consultar;
 
+import java.util.ArrayList;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import citas.Model.Buscadores;
+import citas.Model.Database.PersonasDAO;
+
+@SpringBootApplication
+@RestController
+public class BackEndApplication {
     public static void main(String[] args) {
         SpringApplication.run(BackEndApplication.class, args);
     }
@@ -18,7 +33,7 @@ public class BackEndApplication {
             }
         };
     }
-	
+
     @GetMapping("/FrontEnd/citas")
     public ArrayList<Citas> obtenerCitas() throws SQLException {
         PersonasDAO a = new PersonasDAO();

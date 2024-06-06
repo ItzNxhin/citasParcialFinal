@@ -23,13 +23,21 @@ public class Test {
         a.setGender("Hombre");
         a.setEmail("correo@gmail.com");
         a.setPhone("3003003000");
+<<<<<<< HEAD
         a.setCedula("9533255");
+=======
+        a.setCedula("9738463921");
+>>>>>>> 0b1e12dd1464bcf0f1b886f00f70d77b0a24eb3d
         a.setPago(true);
 
         PersonasDAO n = new PersonasDAO();
 
         try {
+<<<<<<< HEAD
             n.modificarBuscador(a);
+=======
+            n.modificarPostulante(a);
+>>>>>>> 0b1e12dd1464bcf0f1b886f00f70d77b0a24eb3d
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -6,6 +6,7 @@ boton1.addEventListener("click", evento => {
     modificarBuscador();
     alert("Datos modificados con exito")
     div.style.display="none"
+    window.location.href("index.html")
 });
 
 async function modificarBuscador() {

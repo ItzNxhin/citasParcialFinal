@@ -5,7 +5,7 @@ boton1.addEventListener("click", evento => {
     editarPostulante();
     var div = document.getElementById("contenedor");
     div.style.display="none"
-    alert("Datos modificados on exito")
+    alert("Datos modificados con exito")
     window.location.href("index.html")
 });
 

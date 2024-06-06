@@ -21,15 +21,15 @@ public class Test {
         a.setPhysique("Flaco");
         a.setC_status("Soltero");
         a.setGender("Hombre");
-        a.setEmail("correo@gmail.com");
+        a.setEmail("nahin2005@gmail.com");
         a.setPhone("3003003000");
-        a.setCedula("9738463921");
+        a.setCedula("12345");
         a.setPago(true);
 
         PersonasDAO n = new PersonasDAO();
 
         try {
-            n.modificarBuscador(a);
+            n.(a);
         } catch (Exception e) {
             e.printStackTrace();
         }

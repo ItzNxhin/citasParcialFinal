@@ -14,6 +14,7 @@ public class PersonasDAO {
     // Constructor
     public PersonasDAO() {
         // Inicialización de la los objetos como nulos
+        ps = null;
         con = null;
     }
 

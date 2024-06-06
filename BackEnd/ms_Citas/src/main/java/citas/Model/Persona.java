@@ -2,9 +2,8 @@ package citas.Model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
 
-@Data @NoArgsConstructor@ToString
+@Data @NoArgsConstructor
 public class Persona {
     protected String cedula;
     protected String name;

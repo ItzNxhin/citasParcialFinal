@@ -39,8 +39,8 @@ public class PersonasDAO {
         ps.setString(13, obj.getG_estatura());
         ps.setString(14, obj.getG_Identidad());
         ps.setString(15, obj.getG_Edad());
-        ps.setBoolean(17, obj.isPago());
-        ps.setString(16, obj.getCedula());
+        ps.setBoolean(16, obj.isPago());
+        ps.setString(17, obj.getCedula());
         // Ejecuta la consulta
         ps.executeUpdate();
         // Cierra la conexion para proteger la base de datos

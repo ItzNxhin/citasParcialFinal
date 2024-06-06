@@ -1,6 +1,7 @@
 window.onload = function(){
     var div = document.getElementById("contenedor");
     div.style.display="none"
+    traerCedulasBuscadores()
 }
 let boton = document.getElementById("realizarConsulta");
 
@@ -8,13 +9,39 @@ boton.addEventListener("click", evento => {
     evento.preventDefault();
     document.getElementById("realizarConsulta").style.display = "none";
     document.getElementById("contenedor").style.display = "flex";
-    document.getElementById("campoConsultar").style.display= "none"
     consultarBuscador();
 });
-
+async function traerCedulasBuscadores(){
+    try{
+        var response = await fetch('http://localhost:8003/FrontEnd/traerCedulasBuscadores', {
+            method: "GET",
+            headers: {
+                Accept: "application/json",
+            }
+        });
+    
+        if (!response.ok) {
+            throw new Error("Error al realizar la solicitud HTTP");
+        }
+        var cedulas = await response.json();
+        var html = `
+            <select  class="campo" id="cedula">`
+                for(var i=0; i<cedulas.length; i++){
+                    html+=`<option value="${cedulas[i]}">${cedulas[i]}</option>`
+                }
+            html+=`</select>`
+        ;
+        document.getElementById('divCedulas').innerHTML = html;
+    }
+    catch (error) {
+        console.error("Error:", error);
+    }
+    
+}
 async function consultarBuscador(){
+
     try { 
-        var cedula = document.getElementById("campoConsultar").value;
+        var cedula = document.getElementById("cedula").value;
         var response = await fetch('http://localhost:8003/FrontEnd/consultarBuscador/'+cedula, {
             method: "GET",
             headers: {
@@ -53,5 +80,3 @@ async function consultarBuscador(){
         console.error("Error:", error);
     }
 }
-
-let boton2 = document.getElementById()

@@ -1,5 +1,7 @@
 package citas.ms_Consultar;
 
+import java.util.ArrayList;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -39,10 +41,15 @@ public class BackEndApplication {
         PersonasDAO a = new PersonasDAO();
         try {
             s=a.consultarBuscadore(cedula);
-            System.out.println(s.toString());
         } catch (Exception e) {
             e.printStackTrace();
         }
 		return s;
+	}
+
+    @GetMapping("/FrontEnd/traerCedulasBuscadores")
+	public ArrayList<String> traerCedulasBuscadores()throws Exception{
+        PersonasDAO a = new PersonasDAO();
+        return a.cedulaDeBuscadores();
 	}
 }

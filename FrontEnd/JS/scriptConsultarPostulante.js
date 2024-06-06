@@ -61,7 +61,7 @@ async function consultarPostulado() {
     document.getElementById("nombrePostulante").value = campos.name
     document.getElementById("apellidoPostulante").value = campos.lastname
     document.getElementById("edadPostulante").value = campos.age
-    documentc.getElementById("estaturaPostulante").value = campos.height
+    document.getElementById("estaturaPostulante").value = campos.height
     document.getElementById("profesionPostulante").value = campos.job 
     document.getElementById("contexturaPostulante").value = campos.physique
     document.getElementById("estadoCivilPostulante").value = campos.c_status

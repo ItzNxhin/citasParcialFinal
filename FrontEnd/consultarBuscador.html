@@ -85,12 +85,12 @@
          <form id="consultaBuscadorForm">
             <div class="container1">
                <div class="columna">
-                  <select id="cedulaComboBox" class="campo">
+                  <!--select id="cedulaComboBox" class="campo">
                      <option value="" disabled selected>Selecciona la cédula</option>
-                     <!-- Agrega más opciones según sea necesario -->
-                  </select>
-                  <br>
-                  <input type="text" class="campo" placeholder="Nombre:" name="nombreBuscador" required>
+                        Agrega más opciones según sea necesario 
+                  </select-->
+                  <input type="text" class="campo" placeholder="Cedula a consultar" id="campoConsultar" required> <button class="botones1" id="realizarConsulta">Consultar</button>
+                  <input type="text" class="campo" placeholder="Nombre:" id="nombreBuscador" required>
                   <br>
                   <input type="text" class="campo" placeholder="Apellido:" name="apellidoBuscador" required>
                   <br>
@@ -123,7 +123,6 @@
                   <br>
                   <input type="number" class="campo" placeholder="Estatura ideal:" name="GustoEstatura" required>
                   <br>
-                  
                   <input type="text" class="campo" placeholder="Identidad de genero que te gusta:" name="GustoIdentidad" required>
                   <br>
                   <input type="number" class="campo" placeholder="Edad ideal:" name="GustoEdad" required>
@@ -146,5 +145,6 @@
    <!-- Sidebar -->
    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
    <script src="js/custom.js"></script>
+   <script src="js/scriptObtenerPostulado.js"></script>
 </body>
 </html>

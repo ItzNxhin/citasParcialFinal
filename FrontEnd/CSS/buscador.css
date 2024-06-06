@@ -51,6 +51,30 @@
     border-radius: 30px;
     font-family: 'Poppins', sans-serif;
 }
+.botones{
+    width: 30%;
+    align-items: center;
+    float: center;
+    color: #fefeff;
+    font-size: 18px;
+    padding: 10px 0px;
+    background-color:#ff405c;
+    border-radius: 30px;
+    font-family: 'Poppins', sans-serif;
+}
+.botones1{
+    width: 30%;
+    align-items: center;
+    float: center;
+    color: #fefeff;
+    font-size: 18px;
+    padding: 10px 0px;
+    background-color:#ff405c;
+    border-radius: 30px;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
 .container1 {
     display: flex;
     justify-content: center;

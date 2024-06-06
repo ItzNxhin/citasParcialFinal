@@ -8,8 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-
-import citas.Model.Postulantes;
+import citas.Model.Buscadores;
 import citas.Model.Database.PersonasDAO;
 
 @SpringBootApplication
@@ -35,11 +34,12 @@ public class BackEndApplication {
     }
 	
 	@GetMapping("/FrontEnd/consultarBuscador/{cedula}")
-	public Postulantes consultarBuscador(@PathVariable String cedula){
-		Postulantes s = new Postulantes();
+	public Buscadores consultarBuscador(@PathVariable String cedula){
+		Buscadores s = new Buscadores();
         PersonasDAO a = new PersonasDAO();
         try {
-            s=a.consultarPostulante(cedula);
+            s=a.consultarBuscadore(cedula);
+            System.out.println(s.toString());
         } catch (Exception e) {
             e.printStackTrace();
         }

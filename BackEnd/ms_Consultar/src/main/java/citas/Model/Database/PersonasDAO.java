@@ -88,7 +88,7 @@ public class PersonasDAO {
                 p.setPhone(rs.getString("telefono"));
                 p.setG_contextura(rs.getString("g_contextura"));
                 p.setG_Interes(rs.getString("g_interes"));
-                p.setG_estatura(rs.getString("g_identidad"));
+                p.setG_estatura(rs.getString("g_estatura"));
                 p.setG_Identidad(rs.getString("g_identidad"));
                 p.setG_Edad(rs.getString("g_edad"));
                 p.setCedula(rs.getString("cedula"));

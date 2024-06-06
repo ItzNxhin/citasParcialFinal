@@ -53,7 +53,7 @@ public class BackEndApplication {
             p.agregarBuscadores(persona);
         }
         catch(Exception e){
-            
+            System.out.println(e);
         }
     }
 }

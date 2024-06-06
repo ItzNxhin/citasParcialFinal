@@ -9,7 +9,7 @@ boton.addEventListener("click", evento => {
     document.getElementById("realizarConsulta").style.display = "none";
     document.getElementById("contenedor").style.display = "flex";
     document.getElementById("campoConsultar").style.display= "none"
-    consultar();
+    consultarBuscador();
 });
 
 async function consultarBuscador(){
@@ -53,3 +53,5 @@ async function consultarBuscador(){
         console.error("Error:", error);
     }
 }
+
+let boton2 = document.getElementById()

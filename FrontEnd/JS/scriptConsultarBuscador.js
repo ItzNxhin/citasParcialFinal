@@ -25,7 +25,8 @@ async function traerCedulasBuscadores(){
         }
         var cedulas = await response.json();
         var html = `
-            <select  class="campo" id="cedula">`
+            <select  class="camposelect" id="cedula">`
+            html+= `<option value="" disabled selected>Seleccione la cedula a consultar</option>`
                 for(var i=0; i<cedulas.length; i++){
                     html+=`<option value="${cedulas[i]}">${cedulas[i]}</option>`
                 }

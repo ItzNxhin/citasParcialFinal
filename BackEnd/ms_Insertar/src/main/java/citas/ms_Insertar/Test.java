@@ -32,7 +32,7 @@ public class Test {
           try {
             p.agregarPostulantes(a);
           } catch (Exception e) {
-            // TODO: handle exception
+            
           }
 
         

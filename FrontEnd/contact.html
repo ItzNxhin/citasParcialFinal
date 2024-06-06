@@ -10,33 +10,21 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <body>
-<div class="container">
-    <h2>Calendario de Citas</h2>
     <div id="calendar"></div>
-    
-    <h2>Calificación</h2>
-    <form id="calificacionForm">
-        <div class="form-group">
+
+    <div id="calificarCitaForm" style="display: none;">
+        <h3>Calificar Cita</h3>
+        <form id="formCalificarCita">
             <label for="calificacionBuscador">Calificación del Buscador:</label>
-            <select id="calificacionBuscador" class="form-control" name="calificacionBuscador" required>
-                <option value="" disabled selected>Selecciona una opción</option>
-                <option value="amistad">Amistad</option>
-                <option value="más que amistad">Más que amistad</option>
-                <option value="no interesado">No interesado</option>
-            </select>
-        </div>
-        <div class="form-group">
+            <input type="text" id="calificacionBuscador" name="calificacionBuscador">
             <label for="calificacionPostulante">Calificación del Postulante:</label>
-            <select id="calificacionPostulante" class="form-control" name="calificacionPostulante" required>
-                <option value="" disabled selected>Selecciona una opción</option>
-                <option value="amistad">Amistad</option>
-                <option value="más que amistad">Más que amistad</option>
-                <option value="no interesado">No interesado</option>
-            </select>
-        </div>
-        <button type="submit" class="btn btn-primary">Enviar Calificación</button>
-    </form>
-</div>
+            <input type="text" id="calificacionPostulante" name="calificacionPostulante">
+            <input type="hidden" id="citaId" name="citaId">
+            <button type="submit">Enviar Calificación</button>
+        </form>
+    </div>
+
+    <script src="citas.js"></script>
 
 <!-- FullCalendar JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>

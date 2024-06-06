@@ -49,6 +49,26 @@ public class PersonasDAO {
         return cedulas;
     }
 
+    public ArrayList<String> cedulaDePostulantes() throws SQLException {
+        ArrayList<String> cedulas = new ArrayList<String>();
+        String consulta = "SELECT * FROM postulantes";
+
+        // inicializa la conexion para poder ejecutar una peticion a la base de datos
+        con = DatabaseConnection.getConexion();
+        st = con.createStatement();
+        // Ejecuta la consulta
+        rs = st.executeQuery(consulta);
+        // Verifica que la base no ese vacia
+        while (rs.next()) {
+            // toma los parametros de cada papa para añadirlos en un arreglo de datos
+            cedulas.add(rs.getString("cedula"));
+        }
+        // Cierra la conexion para proteger la base de datos
+        st.close();
+        DatabaseConnection.desconectar();
+        return cedulas;
+    }
+
     // Realiza la consulta dado el nombre de una papa
     public Buscadores consultarBuscadore(String cedula) {
         Buscadores p = null;

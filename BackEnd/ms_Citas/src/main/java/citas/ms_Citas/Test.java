@@ -5,6 +5,7 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
+import java.util.Calendar;
 import java.util.Date;
 
 import org.apache.tomcat.util.http.ConcurrentDateFormat;
@@ -18,25 +19,34 @@ public class Test {
 
         Citas s =  new Citas();
         PersonasDAO a = new PersonasDAO();
-        s.setId(2);
+        s.setId(3);
         s.setCal_Buscador("amigos");
         s.setCal_Postulante("amigos");
         s.setCal_Cita("amigos");
 
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Calendar calendar = Calendar.getInstance();
+        
+        // Establecer el año actual
+        int year = calendar.get(Calendar.YEAR);
+        calendar.set(Calendar.YEAR, year);
+        
+        // Encontrar el próximo viernes
+        calendar.set(Calendar.DAY_OF_WEEK, Calendar.FRIDAY);
+        calendar.set(Calendar.HOUR_OF_DAY, 8);
+        calendar.set(Calendar.MINUTE, 0);
+        calendar.set(Calendar.SECOND, 0);
+        calendar.set(Calendar.MILLISECOND, 0);
+        
+        // Verificar si el día actual es posterior al viernes de esta semana
+        // Si es así, mover al siguiente viernes
+        if (calendar.getTime().before(new Date())) {
+            calendar.add(Calendar.WEEK_OF_YEAR, 1);
+        }
+
+        s.setFecha(calendar.getTime());
         
         try {
-            a.calificarCita(s);;
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            System.out.println(sdf.format(a.ultimaFecha()));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            System.out.println(a.ultimoID());
+            a.crearCita(s);
         } catch (Exception e) {
             e.printStackTrace();
         }

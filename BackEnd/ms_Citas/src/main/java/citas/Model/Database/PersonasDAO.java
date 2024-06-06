@@ -271,7 +271,7 @@ public class PersonasDAO {
             c.setId(rs.getInt("idcitas"));
             c.setC_buscador(rs.getString("cedulaBuscador"));
             c.setC_postulante(rs.getString("cedulaPostulante"));
-            c.setFecha(rs.getDate("hora"));
+            c.setFecha(rs.getTimestamp("hora"));
             citas.add(c);
         }
         // Cierra la conexion para proteger la base de datos

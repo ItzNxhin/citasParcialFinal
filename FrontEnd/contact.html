@@ -8,23 +8,69 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <style>
+        .btn-rojo-romantico {
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        .btn-rojo-romantico:hover {
+            background-color: #ff3333;
+        }
+    </style>
 </head>
 <body>
+<div class="container">
+    <h2>Calendario de Citas</h2>
     <div id="calendar"></div>
-
-    <div id="calificarCitaForm" style="display: none;">
-        <h3>Calificar Cita</h3>
-        <form id="formCalificarCita">
+    
+    <h2>Calificación</h2>
+    <form id="calificacionForm">
+        <div class="form-group">
+            <label for="citaId">ID de la Cita:</label>
+            <input type="number" id="citaId" class="form-control" name="citaId" required readonly>
+        </div>
+        <div class="form-group">
+            <label for="cedulaBuscador">Cédula del Buscador:</label>
+            <input type="text" id="cedulaBuscador" class="form-control" name="cedulaBuscador" required readonly>
+        </div>
+        <div class="form-group">
             <label for="calificacionBuscador">Calificación del Buscador:</label>
-            <input type="text" id="calificacionBuscador" name="calificacionBuscador">
+            <select id="calificacionBuscador" class="form-control" name="calificacionBuscador" required>
+                <option value="" disabled selected>Selecciona una opción</option>
+                <option value="amistad">Amistad</option>
+                <option value="más que amistad">Más que amistad</option>
+                <option value="no interesado">No interesado</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="cedulaPostulante">Cédula del Postulante:</label>
+            <input type="text" id="cedulaPostulante" class="form-control" name="cedulaPostulante" required readonly>
+        </div>
+        <div class="form-group">
             <label for="calificacionPostulante">Calificación del Postulante:</label>
-            <input type="text" id="calificacionPostulante" name="calificacionPostulante">
-            <input type="hidden" id="citaId" name="citaId">
-            <button type="submit">Enviar Calificación</button>
-        </form>
-    </div>
+            <select id="calificacionPostulante" class="form-control" name="calificacionPostulante" required>
+                <option value="" disabled selected>Selecciona una opción</option>
+                <option value="amistad">Amistad</option>
+                <option value="más que amistad">Más que amistad</option>
+                <option value="no interesado">No interesado</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar Calificación</button>
+    </form>
 
-    <script src="citas.js"></script>
+    <!-- Botón de regreso a index.html -->
+    <a href="index.html" class="btn-rojo-romantico">Volver a Inicio</a>
+</div>
 
 <!-- FullCalendar JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
@@ -32,36 +78,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
 <!-- Bootstrap JS -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-<script>
-$(document).ready(function() {
-    $('#calendar').fullCalendar({
-        header: {
-            left: 'prev,next today',
-            center: 'title',
-            right: 'month,agendaWeek,agendaDay'
-        },
-        events: [
-           
-            {
-                title: 'Cita 1',
-                start: '2024-06-06T10:00:00',
-                end: '2024-06-06T10:10:00'
-            },
-            {
-                title: 'Cita 2',
-                start: '2024-06-06T10:20:00',
-                end: '2024-06-06T10:30:00'
-            }
-         
-        ]
-    });
-
-    $('#calificacionForm').on('submit', function(event) {
-        event.preventDefault();
-        alert('Calificación enviada');
-    });
-});
-</script>
+<!-- Custom JS -->
+<script src="JS/citas.js"></script>
 </body>
 </html>

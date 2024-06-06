@@ -41,7 +41,7 @@ public class PersonasDAO {
         ps.setString(14, obj.getG_Identidad());
         ps.setString(15, obj.getG_Edad());
         ps.setString(16, obj.getCedula());
-        //ps.setBoolean(17, obj.isPago());
+        ps.setBoolean(17, obj.isPago());
         // Ejecuta la sentencia SQL para insertar el usuario en la base de datos
         ps.executeUpdate();
         // Cierra la sentencia preparada y desconecta de la base de datos

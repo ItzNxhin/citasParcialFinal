@@ -3,6 +3,20 @@ let boton = document.getElementById("registrarBuscador");
 boton.addEventListener("click", evento => {
     evento.preventDefault();
     registrarPersona();
+    document.getElementById("cedulaPostulante").value = ""
+    document.getElementById("nombrePostulante").value = ""
+    document.getElementById("apellidoPostulante").value = ""
+    document.getElementById("edadPostulante").value = ""
+    document.getElementById("estaturaPostulante").value = ""
+    document.getElementById("profesionPostulante").value = ""
+    document.getElementById("contexturaPostulante").value = ""
+    document.getElementById("estadoCivilPostulante").value = ""
+    document.getElementById("generoPostulante").value = ""
+    document.getElementById("correoPostulante").value = ""
+    document.getElementById("telefonoPostulante").value = ""
+    document.getElementById("pagoPostulante").value = ""
+    document.getElementById("interesPrincipalPostulante").value = ""
+    document.getElementById("disponibilidadPostulante").value = ""
 });
 
 async function registrarPersona() {

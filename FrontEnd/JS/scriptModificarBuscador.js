@@ -1,28 +1,14 @@
-let boton = document.getElementById("registrarBuscador");
+let boton1 = document.getElementById("registrarBuscador");
 
-boton.addEventListener("click", evento => {
+boton1.addEventListener("click", evento => {
+    var div = document.getElementById("contenedor");
     evento.preventDefault();
-    registrarPersona();
-    document.getElementById("cedulaBuscador").value = ""
-        document.getElementById("nombreBuscador").value = ""
-        document.getElementById("apellidoBuscador").value = ""
-        document.getElementById("edadBuscador").value = ""
-        document.getElementById("estaturaBuscador").value = ""
-        document.getElementById("profesionBuscador").value = ""
-        document.getElementById("contexturaBuscador").value = ""
-        document.getElementById("estadoCivilBuscador").value = ""
-        document.getElementById("generoBuscador").value = ""
-        document.getElementById("correoBuscador").value = ""
-        document.getElementById("telefonoBuscador").value = ""
-        document.getElementById("pagoBuscador").value = ""
-        document.getElementById("interesIdealBuscador").value = ""
-        document.getElementById("contexturaIdealBuscador").value = ""
-        document.getElementById("estaturaIdealBuscador").value = ""
-        document.getElementById("generoGustoBuscador").value = ""
-        document.getElementById("edadIdealBuscador").value = ""
+    modificarBuscador();
+    alert("Datos modificados con exito")
+    div.style.display="none"
 });
 
-async function registrarPersona() {
+async function modificarBuscador() {
     let campos = {};
 
     campos.cedula = document.getElementById("cedulaBuscador").value;
@@ -63,7 +49,7 @@ async function registrarPersona() {
     }
     
     try {
-        const peticion = await fetch("http://localhost:8002/FrontEnd/insertarBuscador", {
+        const peticion = await fetch("http://localhost:8001/FrontEnd/editarBuscador", {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',

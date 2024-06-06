@@ -9,6 +9,7 @@ boton.addEventListener("click", evento => {
     evento.preventDefault();
     document.getElementById("realizarConsulta").style.display = "none";
     document.getElementById("contenedor").style.display = "flex";
+    document.getElementById("cedula").style.display = "none"
     consultarBuscador();
 });
 async function traerCedulasBuscadores(){
@@ -67,10 +68,10 @@ async function consultarBuscador(){
         document.getElementById("correoBuscador").value = campos.email
         document.getElementById("telefonoBuscador").value = campos.phone
         if(campos.pago = true){
-            document.getElementById("pagoBuscador").value == 'si'
+            document.getElementById("pagoBuscador").value = "Si"
         }
         else{
-            document.getElementById("pagoBuscador").value == 'no'
+            document.getElementById("pagoBuscador").value = "No"
         }
         document.getElementById("interesIdealBuscador").value = campos.g_Interes
         document.getElementById("contexturaIdealBuscador").value = campos.g_contextura

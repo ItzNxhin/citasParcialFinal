@@ -491,7 +491,7 @@ button {
     width: 100%;
     float: left;
     background-color: #ffffff;
-    height: 1000px;
+    height: auto;
     padding: 90px 0px;
     position: relative;
     z-index: -1;
@@ -972,7 +972,7 @@ button {
     background-image: url(../images/footer-bg.png);
     height: auto;
     padding: 60px 0px 0px 0px;
-    margin-top: 400px;
+    margin-top: auto;
 }
 
 .date_main {

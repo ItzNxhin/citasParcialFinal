@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>Registro Buscador</title>
+      <title>Consultar Postulante</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -55,7 +55,10 @@
                      <a class="nav-link" href="consultas.html">Consultar</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="contact.html">Contact Us</a>
+                     <a class="nav-link" href="contact.html">Citas</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="modificaciones.html">Modificar</a>
                   </li>
                </ul>
             </div>
@@ -91,47 +94,34 @@
             <form method="POST">
                 <div class="container1" id="contenedor">
                     <div class="columna">
-                        <input type="text" class="campo" placeholder="Nombre:"id="nombrePostulante">
+                        <input type="text" class="campo" placeholder="Nombre:"id="nombrePostulante" readonly>
                         <br>
-                        <input type="text" class="campo" placeholder="Apellido:" id="apellidoPostulante">
+                        <input type="text" class="campo" placeholder="Apellido:" id="apellidoPostulante" readonly>
                         <br>
-                        <input type="text" class="campo" placeholder="Cedula:" id="cedulaPostulante">
+                        <input type="text" class="campo" placeholder="Cedula:" id="cedulaPostulante" readonly>
                         <br>
-                        <input type="number" class="campo" placeholder="Edad:" id="edadPostulante">
+                        <input type="number" class="campo" placeholder="Edad:" id="edadPostulante" readonly>
                         <br>
-                        <input type="number" class="campo" placeholder="Estatura:" id="estaturaPostulante">
+                        <input type="number" class="campo" placeholder="Estatura:" id="estaturaPostulante" readonly>
                         <br>
-                        <select class="campo" id="estadoCivilPostulante">
-                           <option value="soltero">Soltero</option>
-                           <option value="separado">Separado</option>
-                           <option value="viudo">Viudo</option>
-                           <option value="es_complicado">Es complicado</option>
-                        </select>
+                        <input type="text" class="campo" id="estadoCivilPostulante" readonly>
                         <br>
-                        <input type="text" class="campo" placeholder="Profesion u oficio:" id="profesionPostulante">
+                        <input type="text" class="campo" placeholder="Profesion u oficio:" id="profesionPostulante"readonly>
                         <br>
-                        <input type="text" class="campo" placeholder="Identidad de genero:" id="generoPostulante">
+                        <input type="text" class="campo" placeholder="Identidad de genero:" id="generoPostulante" readonly>
                      </div>
                      <div class="columna">
-                        <input type="text" class="campo" placeholder="Correo Electronico:" id="correoPostulante">
+                        <input type="text" class="campo" placeholder="Correo Electronico:" id="correoPostulante" readonly>
                         <br>
-                        <input type="text" class="campo" placeholder="Telefono:" id="telefonoPostulante">
+                        <input type="text" class="campo" placeholder="Telefono:" id="telefonoPostulante" readonly>
                         <br>
-                        <input type="text" class="campo" placeholder="Contextura:" id="contexturaPostulante"> 
+                        <input type="text" class="campo" placeholder="Contextura:" id="contexturaPostulante" readonly> 
                         <br>   
-                        <input type="text" class="campo" placeholder="Interes principal:" id="interesPrincipalPostulante">
+                        <input type="text" class="campo" placeholder="Interes principal:" id="interesPrincipalPostulante" readonly>
                         <br>
-                        <input type="text" class="campo" placeholder="disponibilidad" id="disponibilidadPostulante">
+                        <input type="text" class="campo" placeholder="disponibilidad" id="disponibilidadPostulante" readonly>
                         <br>
-                        <select class="campo" id="pagoPostulante">
-                           <option value="si">Si</option>
-                           <option value="no">No</option>
-                        </select>
-                        <br>
-                        <div class="fila">
-                            <input type="submit" class="botones" id="registrarBuscador">
-                            <input type="reset" class="botones" id="limpiar">
-                        </div>                  
+                        <input type="text" class="campo" id="pagoPostulante"readonly>             
                     </div>
                 </div>
             </form>

@@ -13,7 +13,7 @@ public class Test {
     static void h() {
 
         Postulantes a = new Postulantes();
-        a.setName("Sujeto");
+        a.setName("Nicolas");
         a.setLastname("De prueba");
         a.setAge(19);
         a.setHeight(Float.parseFloat("1.75"));
@@ -25,7 +25,7 @@ public class Test {
         a.setPhone("3003003000");
         a.setDisponibilidad("si");
         a.setInteres("play");
-        a.setCedula("12345678");
+        a.setCedula("987654321");
         a.setPago(true);
 
         PersonasDAO n = new PersonasDAO();

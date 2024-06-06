@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>Testimonial</title>
+      <title>Registro Buscador</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -23,6 +23,7 @@
       <link rel="icon" href="images/fevicon.png" type="image/gif" />
       <!-- Scrollbar Custom CSS -->
       <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <link rel="stylesheet" href="css/buscador.css">
       <!-- Tweaks for older IEs-->
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
       <!-- owl stylesheets -->
@@ -45,17 +46,20 @@
                      <a class="nav-link" href="index.html">Home</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="wish.html">Wish</a>
+                     <a class="nav-link" href="registroBuscador.html">Buscador</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="gifts.html">Best Deals</a>
+                     <a class="nav-link" href="registroPostulante.html">Postulante</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="testimonial.html">Testimonial</a>
+                     <a class="nav-link" href="consultas.html">Consultar</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="contact.html">Contact Us</a>
+                     <a class="nav-link" href="contact.html">Citas</a>
                   </li>
+                  <li class="nav-item">
+                    <a href="modificaciones.html">Modificar</a>
+                 </li>
                </ul>
             </div>
             <div class="main">
@@ -72,48 +76,73 @@
          </nav>
       </div>
       <!-- header section start -->
-      <!-- testimonial section start -->
-      <div class="testimonial_section layout_padding">
+      <!-- wine section start -->
+      <div class="about_section layout_padding">
          <div class="container">
-            <div class="tree_icon_2"><img src="images/tree-icon.png"></div>
-            <h1 class="testimonial_taital">Testimonial</h1>
-            <div class="image_2"><img src="images/img-2.png"></div>
-         </div>
-         <div class="testimonial_section_2">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-               <ol class="carousel-indicators">
-                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-               </ol>
-               <div class="carousel-inner">
-                  <div class="carousel-item active">
-                     <div class="container">
-                        <div class="image_6"><img src="images/img-6.png"></div>
-                        <p class="lorem_text">here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use </p>
-                        <h2 class="mark_text">Mark Duo</h2>
-                     </div>
-                  </div>
-                  <div class="carousel-item">
-                     <div class="container">
-                        <div class="image_6"><img src="images/img-6.png"></div>
-                        <p class="lorem_text">here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use </p>
-                        <h2 class="mark_text">Mark Duo</h2>
-                     </div>
-                  </div>
-                  <div class="carousel-item">
-                     <div class="container">
-                        <div class="image_6"><img src="images/img-6.png"></div>
-                        <p class="lorem_text">here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use </p>
-                        <h2 class="mark_text">Mark Duo</h2>
-                     </div>
-                  </div>
+            <div class="row">
+               <div class="col-md-6">
+               <h1 class="about_taital">Consulta tus datos como postulante <span style="color: #ff3f5c;"></span></h1>
                </div>
             </div>
          </div>
+         <div class="d1center">
+            <div class = divConsultar id="divCedulas">
+            </div>
+            <div class="divConsultar">
+               <button class="botones1" id="realizarConsulta">Consultar</button>
+            </div>
+            <form method="POST">
+                <div class="container1" id="contenedor">
+                    <div class="columna">
+                        <input type="text" class="campo" placeholder="Nombre:"id="nombrePostulante">
+                        <br>
+                        <input type="text" class="campo" placeholder="Apellido:" id="apellidoPostulante">
+                        <br>
+                        <input type="text" class="campo" placeholder="Cedula:" id="cedulaPostulante">
+                        <br>
+                        <input type="number" class="campo" placeholder="Edad:" id="edadPostulante">
+                        <br>
+                        <input type="number" class="campo" placeholder="Estatura:" id="estaturaPostulante">
+                        <br>
+                        <select class="campo" id="estadoCivilPostulante">
+                           <option value="soltero">Soltero</option>
+                           <option value="separado">Separado</option>
+                           <option value="viudo">Viudo</option>
+                           <option value="es_complicado">Es complicado</option>
+                        </select>
+                        <br>
+                        <input type="text" class="campo" placeholder="Profesion u oficio:" id="profesionPostulante">
+                        <br>
+                        <input type="text" class="campo" placeholder="Identidad de genero:" id="generoPostulante">
+                     </div>
+                     <div class="columna">
+                        <input type="text" class="campo" placeholder="Correo Electronico:" id="correoPostulante">
+                        <br>
+                        <input type="text" class="campo" placeholder="Telefono:" id="telefonoPostulante">
+                        <br>
+                        <input type="text" class="campo" placeholder="Contextura:" id="contexturaPostulante"> 
+                        <br>   
+                        <input type="text" class="campo" placeholder="Interes principal:" id="interesPrincipalPostulante">
+                        <br>
+                        <input type="text" class="campo" placeholder="disponibilidad" id="disponibilidadPostulante">
+                        <br>
+                        <select class="campo" id="pagoPostulante">
+                           <option value="si">Si</option>
+                           <option value="no">No</option>
+                        </select>
+                        <br>
+                        <div class="fila">
+                            <input type="submit" class="botones" id="registrarBuscador">
+                            <input type="reset" class="botones" id="limpiar">
+                        </div>                  
+                    </div>
+                </div>
+            </form>
+        </div>
       </div>
-      <!-- testimonial section end -->
+      <!-- wine section end -->
       <!-- footer section start -->
+      <br>
       <div class="footer_section layout_padding">
          <div class="container">
             <div class="social_icon">
@@ -202,5 +231,6 @@
          else sticky.removeClass('fix-nav');
          });
       </script>
+      <script src="js/scriptConsultarPostulante.js"></script>
    </body>
 </html>

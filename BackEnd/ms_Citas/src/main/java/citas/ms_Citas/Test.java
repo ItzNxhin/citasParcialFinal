@@ -11,6 +11,7 @@ import java.util.Date;
 
 import org.apache.tomcat.util.http.ConcurrentDateFormat;
 
+import citas.Controller.CalCitas;
 import citas.Controller.GenCitas;
 import citas.Model.Citas;
 import citas.Model.Postulantes;
@@ -23,14 +24,11 @@ public class Test {
 
         
         PersonasDAO a = new PersonasDAO();
+        CalCitas xd = new CalCitas();
         
-        
-        
+        xd.calificar();
         try {
-            ArrayList<Citas> xd = new ArrayList<>(a.citas());
-            for(Citas i : xd){
-                System.out.println(i.toString());
-            }
+            
         } catch (Exception e) {
             e.printStackTrace();
         }

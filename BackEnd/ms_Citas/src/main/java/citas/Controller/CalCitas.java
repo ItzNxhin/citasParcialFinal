@@ -45,16 +45,22 @@ public class CalCitas {
                 i.setCal_Cita(calificacion);
                 bd.calificarCita(i);
                 if(calificacion.equals("amistad")){
-                    cr.enviarCorreo(bd.consultarBuscadore(i.getC_buscador()).getEmail(), "Contactate con tu cita para que sean amigos");
-                    cr.enviarCorreo(bd.consultarPostulante(i.getC_postulante()).getEmail(), "Contactate con tu cita para que sean amigos");
+                    cr.crearMensaje(bd.consultarBuscadore(i.getC_buscador()).getEmail(), "Contactate con tu cita para que sean amigos");
+                    cr.EnviarMensaje();
+                    cr.crearMensaje(bd.consultarPostulante(i.getC_postulante()).getEmail(), "Contactate con tu cita para que sean amigos");
+                    cr.EnviarMensaje();
                 }
                 else if(calificacion.equals("más que amistad")){
-                    cr.enviarCorreo(bd.consultarBuscadore(i.getC_buscador()).getEmail(), "Contactate con tu cita para que salgan, HAY MATCH!!!");
-                    cr.enviarCorreo(bd.consultarPostulante(i.getC_postulante()).getEmail(), "Contactate con tu cita para que salgan, HAY MATCH!!!");
+                    cr.crearMensaje(bd.consultarBuscadore(i.getC_buscador()).getEmail(), "Contactate con tu cita para que salgan, HAY MATCH!!!");
+                    cr.EnviarMensaje();
+                    cr.crearMensaje(bd.consultarPostulante(i.getC_postulante()).getEmail(), "Contactate con tu cita para que salgan, HAY MATCH!!!");
+                    cr.EnviarMensaje();
                 }
             }
         } catch (SQLException e) {
             
-        } 
+        } catch (Exception ez){
+
+        }
     }
 }

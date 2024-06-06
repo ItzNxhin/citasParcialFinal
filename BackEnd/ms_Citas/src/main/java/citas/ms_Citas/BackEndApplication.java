@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+import citas.Controller.CalCitas;
+import citas.Controller.GenCitas;
 import citas.Model.Citas;
 import citas.Model.Database.PersonasDAO;
 
@@ -50,5 +53,20 @@ public class BackEndApplication {
         // Crea una instancia de PersonasDAO y llama al método calificarCita para calificar la cita recibida
         PersonasDAO a = new PersonasDAO();
         a.calificarCita(cita);
+    }
+
+    @PostMapping("/FrontEnd/realizarConvocatoria")
+    public void realizarConvocatoria(@RequestBody Object data) {
+        // Implementar lógica para realizar convocatoria
+        GenCitas ct = new GenCitas();
+        ct.genCitas();
+    }
+
+    // Nuevo método para calificar citas
+    @PostMapping("/FrontEnd/calificarCitas")
+    public void calificarCitas(@RequestBody Object data) {
+        // Implementar lógica para calificar citas
+        CalCitas ct = new CalCitas();
+        ct.calificar();
     }
 }

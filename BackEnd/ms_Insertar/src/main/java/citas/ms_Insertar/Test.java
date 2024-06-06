@@ -31,7 +31,7 @@ public class Test {
           try {
             p.agregarBuscadores(a);
           } catch (Exception e) {
-            // TODO: handle exception
+            
           }
 
         

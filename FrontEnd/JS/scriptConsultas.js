@@ -12,7 +12,7 @@ boton.addEventListener("click", evento => {
     consultar();
 });
 
-async function consultar(){
+async function consultarBuscador(){
     try { 
         var cedula = document.getElementById("campoConsultar").value;
         var response = await fetch('http://localhost:8003/FrontEnd/consultarBuscador/'+cedula, {

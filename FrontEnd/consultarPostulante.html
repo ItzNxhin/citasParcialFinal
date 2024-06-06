@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>Consulta Postulante</title>
+      <title>Registro Buscador</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -29,7 +29,7 @@
       <!-- owl stylesheets -->
       <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Poppins:400,700&display=swap&subset=latin-ext" rel="stylesheet">
       <link rel="stylesheet" href="css/owl.carousel.min.css">
-      <link rel="stylesheet" href="css/owl.theme.default.min.css">
+      <link rel="stylesoeet" href="css/owl.theme.default.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
    </head>
    <body>
@@ -46,13 +46,13 @@
                      <a class="nav-link" href="index.html">Home</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="wish.html">Buscador</a>
+                     <a class="nav-link" href="registroBuscador.html">Buscador</a>
                   </li>
                   <li class="nav-item">
                      <a class="nav-link" href="registroPostulante.html">Postulante</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="testimonial.html">Testimonial</a>
+                     <a class="nav-link" href="consultas.html">Consultar</a>
                   </li>
                   <li class="nav-item">
                      <a class="nav-link" href="contact.html">Contact Us</a>
@@ -78,28 +78,25 @@
          <div class="container">
             <div class="row">
                <div class="col-md-6">
-               <h1 class="about_taital">Consulta tus datos como postulante <span style="color: #ff3f5c;"></span></h1>
+               <h1 class="about_taital">Registrate como postulante <span style="color: #ff3f5c;"></span></h1>
                </div>
             </div>
          </div>
          <div class="d1center">
-            <form id="consultaPostulanteForm">
+            <form method="POST">
                 <div class="container1">
                     <div class="columna">
-                        <select id="cedulaComboBox" class="campo">
-                           <option value="" disabled selected>Selecciona la cédula</option>
-                           <!-- Agrega más opciones según sea necesario -->
-                        </select>
+                        <input type="text" class="campo" placeholder="Nombre:"id="nombrePostulante">
                         <br>
-                        <input type="text" class="campo" placeholder="Nombre:" name="nombrePostulante" id="nombrePostulante">
+                        <input type="text" class="campo" placeholder="Apellido:" id="apellidoPostulante">
                         <br>
-                        <input type="text" class="campo" placeholder="Apellido:" name="apellidoPostulante" id="apellidoPostulante">
+                        <input type="text" class="campo" placeholder="Cedula:" id="cedulaPostulante">
                         <br>
-                        <input type="number" class="campo" placeholder="Edad:" name="edadPostulante" id="edadPostulante">
+                        <input type="number" class="campo" placeholder="Edad:" id="edadPostulante">
                         <br>
-                        <input type="number" class="campo" placeholder="Estatura:" name="estaturaPostulante" id="estaturaPostulante">
+                        <input type="number" class="campo" placeholder="Estatura:" id="estaturaPostulante">
                         <br>
-                        <select class="campo" name="estadoCivilPostulante" id="estadoCivilPostulante">
+                        <select class="campo" id="estadoCivilPostulante">
                            <option value="" disabled selected>Estado civil</option>
                            <option value="soltero">Soltero</option>
                            <option value="separado">Separado</option>
@@ -107,25 +104,30 @@
                            <option value="es_complicado">Es complicado</option>
                         </select>
                         <br>
-                        <input type="text" class="campo" placeholder="Profesion u oficio:" name="profesionPostulante" id="profesionPostulante">
+                        <input type="text" class="campo" placeholder="Profesion u oficio:" id="profesionPostulante">
                         <br>
+                        <input type="text" class="campo" placeholder="Identidad de genero:" id="generoPostulante">
                      </div>
                      <div class="columna">
-                        <input type="text" class="campo" placeholder="Identidad de genero:" name="generoPostulante" id="generoPostulante">
+                        <input type="text" class="campo" placeholder="Correo Electronico:" id="correoPostulante">
                         <br>
-                        <input type="text" class="campo" placeholder="Correo Electronico:" name="correoPostulante" id="correoPostulante">
+                        <input type="text" class="campo" placeholder="Telefono:" id="telefonoPostulante">
                         <br>
-                        <input type="text" class="campo" placeholder="Telefono:" name="telefonoPostulante" id="telefonoPostulante">
-                        <br>
-                        <input type="text" class="campo" placeholder="Contextura que te gusta:" name="contexturaPostulante" id="contexturaPostulante"> 
+                        <input type="text" class="campo" placeholder="Contextura:" id="contexturaPostulante"> 
                         <br>   
-                        <input type="text" class="campo" placeholder="Interes principal:" name="interesPrincipalPostulante" id="interesPrincipalPostulante">
+                        <input type="text" class="campo" placeholder="Interes principal:" id="interesPrincipalPostulante">
                         <br>
-                        <input type="text" class="campo" placeholder="Disponibilidad:" name="disponibilidadPostulante" id="disponibilidadPostulante">
+                        <input type="text" class="campo" placeholder="disponibilidad" id="disponibilidadPostulante">
+                        <br>
+                        <select class="campo" id="pagoPostulante">
+                           <option value="" disabled selected>Pagó?</option>
+                           <option value="si">Si</option>
+                           <option value="no">No</option>
+                        </select>
                         <br>
                         <div class="fila">
-                            <input type="button" class="botones" value="Consultar" id="consultarPostulante">
-                            <input type="reset" class="botones" name="limpiar">
+                            <input type="submit" class="botones" id="registrarBuscador">
+                            <input type="reset" class="botones" id="limpiar">
                         </div>                  
                     </div>
                 </div>
@@ -133,7 +135,28 @@
         </div>
       </div>
       <!-- wine section end -->
- 
+      <!-- footer section start -->
+      <br>
+      <div class="footer_section layout_padding">
+         <div class="container">
+            <div class="social_icon">
+               <ul>
+                  <li><a href="#"><img src="images/fb-icon.png"></a></li>
+                  <li><a href="#"><img src="images/twitter-icon.png"></a></li>
+                  <li><a href="#"><img src="images/instagram-icon.png"></a></li>
+                  <li><a href="#"><img src="images/linkedin-icon.png"></a></li>
+               </ul>
+            </div>
+         </div>
+         <!-- copyright section start -->
+         <div class="copyright_section">
+            <div class="container">
+               <p class="copyright_text">Copyright 2019 All Right Reserved By <a href="https://html.design">Free  html Templates</a></p>
+            </div>
+         </div>
+         <!-- copyright section end -->
+      </div>
+      <!-- footer section end -->
       <!-- Javascript files-->
       <script src="js/jquery.min.js"></script>
       <script src="js/popper.min.js"></script>
@@ -143,5 +166,65 @@
       <!-- sidebar -->
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>
+      <!-- javascript --> 
+      <script src="js/owl.carousel.js"></script>
+      <script>
+         if ( $(window).width() > 990) { 
+         
+          $('.owl-carousel').owlCarousel({
+             stagePadding: 350,
+             loop:true,
+             margin:35,
+             nav:true,
+             responsive:{
+                 0:{
+                     items:1
+                 },
+                 600:{
+                     items:1
+                 },
+                 1000:{
+                     items:1
+                 }
+             }
+         })
+         
+          }
+         
+         
+         
+          else { 
+         
+          $('.owl-carousel').owlCarousel({
+             stagePadding: 70,
+             loop:true,
+             margin:10,
+             nav:true,
+             responsive:{
+                 0:{
+                     items:1
+                 },
+                 600:{
+                     items:1
+                 },
+                 1000:{
+                     items:1
+                 }
+             }
+         })
+         
+           }    
+         
+      </script>
+      <script type="text/javascript">
+         $(window).scroll(function(){
+         var sticky = $('#navbar'),
+         scroll = $(window).scrollTop();
+         
+         if (scroll >= 600) sticky.addClass('fix-nav');
+         else sticky.removeClass('fix-nav');
+         });
+      </script>
+      <script src="js/scriptFormPostulantes.js"></script>
    </body>
 </html>

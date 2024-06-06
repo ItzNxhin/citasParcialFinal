@@ -1,5 +1,4 @@
 package citas.Model.Database;
-
 import java.sql.Connection;
 import java.util.Date;
 import java.sql.PreparedStatement;

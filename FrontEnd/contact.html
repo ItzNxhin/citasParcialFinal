@@ -54,7 +54,7 @@ $(document).ready(function() {
             right: 'month,agendaWeek,agendaDay'
         },
         events: [
-            // Aquí debes cargar las citas desde tu servidor o base de datos
+           
             {
                 title: 'Cita 1',
                 start: '2024-06-06T10:00:00',
@@ -65,13 +65,12 @@ $(document).ready(function() {
                 start: '2024-06-06T10:20:00',
                 end: '2024-06-06T10:30:00'
             }
-            // Agrega más citas según sea necesario
+         
         ]
     });
 
     $('#calificacionForm').on('submit', function(event) {
         event.preventDefault();
-        // Aquí debes manejar el envío de la calificación
         alert('Calificación enviada');
     });
 });

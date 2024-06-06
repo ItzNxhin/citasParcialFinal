@@ -57,4 +57,16 @@ public class BackEndApplication {
         }
     }
 
+    @PostMapping("/FrontEnd/realizarConvocatoria")
+    public void realizarConvocatoria(@RequestBody Object data) {
+        // Implementar lógica para realizar convocatoria
+        System.out.println("Convocatoria realizada");
+    }
+
+    // Nuevo método para calificar citas
+    @PostMapping("/FrontEnd/calificarCitas")
+    public void calificarCitas(@RequestBody Object data) {
+        // Implementar lógica para calificar citas
+        System.out.println("Citas calificadas");
+    }
 }

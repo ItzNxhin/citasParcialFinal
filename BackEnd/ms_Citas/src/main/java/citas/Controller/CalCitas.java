@@ -25,4 +25,8 @@ public class CalCitas {
         }
         
     }
+
+    public void calificar(){
+        
+    }
 }

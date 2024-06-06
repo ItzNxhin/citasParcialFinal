@@ -4,6 +4,7 @@ boton.addEventListener("click", evento => {
     evento.preventDefault();
     registrarPersona();
 });
+
 async function registrarPersona() {
     let campos = {};
 
@@ -29,6 +30,21 @@ async function registrarPersona() {
     campos.g_estatura = document.getElementById("estaturaIdealBuscador").value;
     campos.g_Identidad = document.getElementById("generoGustoBuscador").value;
     campos.g_Edad = document.getElementById("edadIdealBuscador").value;
+    
+    // Validar edad
+    if (campos.age < 25 || campos.age > 35) {
+        alert("No cumples con el requisito de edad de la convocatoria.");
+        return;
+    }
+
+    // Validar campos vacíos
+    for (let key in campos) {
+        if (campos[key] === "") {
+            alert("Por favor completa todos los campos.");
+            return;
+        }
+    }
+    
     try {
         const peticion = await fetch("http://localhost:8002/FrontEnd/insertarBuscador", {
             method: 'POST',

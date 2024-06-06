@@ -25,7 +25,7 @@ public class Test {
           a.setPhone("3003003000");
           a.setDisponibilidad("si");
           a.setInteres("juegos");
-          a.setCedula("1234568");
+          a.setCedula("12345");
          
 
           PersonasDAO p = new PersonasDAO();

@@ -5,6 +5,7 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -22,17 +23,18 @@ public class Test {
 
         
         PersonasDAO a = new PersonasDAO();
-        GenCitas s = new GenCitas();
-        // Verificar si el día actual es posterior al viernes de esta semana
-        // Si es así, mover al siguiente viernes
+        
         
         
         try {
-            s.genCitas();
+            ArrayList<Citas> xd = new ArrayList<>(a.citas());
+            for(Citas i : xd){
+                System.out.println(i.toString());
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
-        System.out.println(s.toString());
+        
         
 
     }

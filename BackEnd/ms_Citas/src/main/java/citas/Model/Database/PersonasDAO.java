@@ -256,5 +256,30 @@ public class PersonasDAO {
         return id;
     }
 
+    public ArrayList<Citas> citas() throws SQLException {
+        ArrayList<Citas> citas = new ArrayList<Citas>();
+        String consulta = "SELECT * FROM citas";
+
+        // inicializa la conexion para poder ejecutar una peticion a la base de datos
+        con = DatabaseConnection.getConexion();
+        st = con.createStatement();
+        // Ejecuta la consulta
+        rs = st.executeQuery(consulta);
+        // Verifica que la base no ese vacia
+        while (rs.next()) {
+            // toma los parametros de cada papa para añadirlos en un arreglo de datos
+            Citas c = new Citas();
+            c.setId(rs.getInt("idcitas"));
+            c.setC_buscador(rs.getString("cedulaBuscador"));
+            c.setC_postulante(rs.getString("cedulaPostulante"));
+            c.setFecha(rs.getDate("hora"));
+            citas.add(c);
+        }
+        // Cierra la conexion para proteger la base de datos
+        st.close();
+        DatabaseConnection.desconectar();
+        return citas;
+    }
+
 
 }

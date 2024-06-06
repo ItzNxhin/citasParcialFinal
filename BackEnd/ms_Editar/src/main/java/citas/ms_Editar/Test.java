@@ -12,7 +12,7 @@ import citas.Model.Database.PersonasDAO;
 public class Test {
     static void h() {
 
-        Buscadores a = new Buscadores();
+        Postulantes a = new Postulantes();
         a.setName("Nicolas");
         a.setLastname("De prueba");
         a.setAge(19);
@@ -23,13 +23,13 @@ public class Test {
         a.setGender("Hombre");
         a.setEmail("nahin2005@gmail.com");
         a.setPhone("3003003000");
-        a.setCedula("12345");
+        a.setCedula("123");
         a.setPago(true);
 
         PersonasDAO n = new PersonasDAO();
 
         try {
-            n.(a);
+            n.modificarPostulante(a);
         } catch (Exception e) {
             e.printStackTrace();
         }

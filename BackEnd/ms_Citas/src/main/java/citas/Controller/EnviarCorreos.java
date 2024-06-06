@@ -46,7 +46,7 @@ public class EnviarCorreos {
             // Enviar el correo
             Transport.send(message);
 
-            
+            System.out.println("excelente");
 
         } catch (MessagingException e) {
             e.printStackTrace();

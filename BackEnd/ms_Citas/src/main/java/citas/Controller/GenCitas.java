@@ -1,7 +1,6 @@
-package citas.ms_Citas;
+package citas.Controller;
 
-import java.util.Date;
-import java.security.Timestamp;
+import java.util.Date;  
 import java.sql.SQLException;
 import java.time.DayOfWeek;
 import java.time.LocalDateTime;
@@ -10,13 +9,10 @@ import java.time.ZoneId;
 import java.time.temporal.TemporalAdjusters;
 import java.util.ArrayList;
 
-import javax.xml.crypto.Data;
-
 import citas.Model.Buscadores;
 import citas.Model.Citas;
 import citas.Model.Postulantes;
 import citas.Model.Database.PersonasDAO;
-import lombok.NoArgsConstructor;
 
 public class GenCitas {
     PersonasDAO bd;
@@ -52,6 +48,7 @@ public class GenCitas {
     }
 
     public Date getAdjustedDate(Date lastDate) {
+
         // Convertir java.util.Date a LocalDateTime
         LocalDateTime lastDateTime = lastDate.toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime();
 

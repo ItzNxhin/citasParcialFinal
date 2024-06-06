@@ -56,7 +56,6 @@ async function consultarPostulado() {
     }
 
     var campos = await response.json();
-    console.log(campos)
     document.getElementById("cedulaPostulante").value = campos.cedula
     document.getElementById("nombrePostulante").value = campos.name
     document.getElementById("apellidoPostulante").value = campos.lastname
@@ -69,10 +68,10 @@ async function consultarPostulado() {
     document.getElementById("correoPostulante").value = campos.email
     document.getElementById("telefonoPostulante").value = campos.phone
     if (campos.pago == true) {
-        document.getElementById("pagoPostulante").value = "si"
+        document.getElementById("pagoPostulante").value = "Si"
     }
     else {
-        document.getElementById("pagoPostulante").value = "no"
+        document.getElementById("pagoPostulante").value = "No"
     }
     document.getElementById("interesPrincipalPostulante").value = campos.interes
     document.getElementById("disponibilidadPostulante").value = campos.disponibilidad

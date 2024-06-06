@@ -3,6 +3,23 @@ let boton = document.getElementById("registrarBuscador");
 boton.addEventListener("click", evento => {
     evento.preventDefault();
     registrarPersona();
+    document.getElementById("cedulaBuscador").value = ""
+        document.getElementById("nombreBuscador").value = ""
+        document.getElementById("apellidoBuscador").value = ""
+        document.getElementById("edadBuscador").value = ""
+        document.getElementById("estaturaBuscador").value = ""
+        document.getElementById("profesionBuscador").value = ""
+        document.getElementById("contexturaBuscador").value = ""
+        document.getElementById("estadoCivilBuscador").value = ""
+        document.getElementById("generoBuscador").value = ""
+        document.getElementById("correoBuscador").value = ""
+        document.getElementById("telefonoBuscador").value = ""
+        document.getElementById("pagoBuscador").value = ""
+        document.getElementById("interesIdealBuscador").value = ""
+        document.getElementById("contexturaIdealBuscador").value = ""
+        document.getElementById("estaturaIdealBuscador").value = ""
+        document.getElementById("generoGustoBuscador").value = ""
+        document.getElementById("edadIdealBuscador").value = ""
 });
 
 async function registrarPersona() {
